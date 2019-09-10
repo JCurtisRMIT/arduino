@@ -1,31 +1,3 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/JCurtisRMIT/knowledgeRepo/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
@@ -35,7 +7,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 --------------------------
 
 
-# Blynk & Arduino
+## Blynk & Arduino
 
 Blynk is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
 
@@ -63,14 +35,16 @@ To install board support for ESP8266, in _File>Preferences>Additional Board Mana
 
 **ESP8266 Library**:  Go to Tools > Boards > Boards Manager and type 'esp8266' in the search box.  Now install ESP8266 by ESP8266 Community (this is about 150MB download and can take a while). 
 
-![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/005%20boardsManager1.png)
+![Boards Manager](/Blynk8266/005boardsManager1.png)
 
-![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/006%20boardsManager2.png)
+![Boards Manager](/Blynk8266/006boardsManager2.png)
 
 You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Tools > Board:
 
-![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/007%20d1MiniBoard.png)
+![](/Blynk8266/007d1MiniBoard.png)
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
+```markdown
 `/*************************************************************Download latest Blynk library here:https://github.com/blynkkk/blynk-library/releases/latestBlynk is a platform with iOS and Android apps to controlArduino, Raspberry Pi and the likes over the Internet.You can easily build graphic interfaces for all yourprojects by simply dragging and dropping widgets.Downloads, docs, tutorials: http://www.blynk.ccSketch generator: http://examples.blynk.ccBlynk community: http://community.blynk.ccFollow us: http://www.fb.com/blynkapphttp://twitter.com/blynk_appBlynk library is licensed under MIT licenseThis example code is in public domain.*************************************************************This example runs directly on ESP8266 chip.Note: This requires ESP8266 support package:https://github.com/esp8266/ArduinoPlease be sure to select the right ESP8266 modulein the Tools -> Board menu!Change WiFi ssid, pass, and Blynk auth token to run :)Feel free to apply it to any other example. It's simple!*************************************************************//* Comment this out to disable prints and save space */#define BLYNK_PRINT Serial#include <ESP8266WiFi.h>#include <BlynkSimpleEsp8266.h>// You should get Auth Token in the Blynk App.// Go to the Project Settings (nut icon).char auth[] = "YourAuthToken";// Your WiFi credentials.// Set password to "" for open networks.char ssid[] = "YourNetworkName";char pass[] = "YourPassword";void setup(){// Debug consoleSerial.begin(9600);Blynk.begin(auth, ssid, pass);}void loop(){Blynk.run();}`
+```
