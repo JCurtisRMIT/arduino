@@ -126,7 +126,7 @@ If you see a similar screen in your Serial Monitor you've successfully connected
 Great, now lets explore simple connections between your phone and Blynk.
 
 
-# Sending Data From The Blynk App
+## Sending Data From The Blynk App
 
 First let's make a simple circuit with an LED and a resistor. Make sure you unplug your D1 Mini when changing the circuit. It's bad practice to leave a circuit powered whilst changing connections.
 
@@ -141,3 +141,22 @@ We're going to tap the **Output** section and change the Pin to **Digital Pin: D
 
 {: .center}
 ![](/Blynk8266/010blynkButton.jpg){:height="50%" width="50%"}
+
+Now close the Button Settings menu by hitting OK. Go ahead and plug your D1 Mini into power, check the Serial Monitor again to see that it connects successfully to your WiFi. Once it has, you can hit Play now in your project and try tapping the button on the Blynk app.
+
+Voila! Notice how we didn't need to write any code in the Arduino IDE for pinMode() and digitalWrite() like usual? The Blynk library takes care of some of this stuff so we can prototype some functionality just using the app.
+
+ 
+
+## Sending Data To The Blynk App
+
+Now we're going to explore a Blynk concept called **Virtual Pins** (Links to an external site.).  Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that **Virtual Pins** are in addition to the **Digital Pins** you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. 
+
+Virtual Pins can also be used to interface with external libraries (Servo, LCD and others) and implement custom functionality.
+
+Make the following circuit:
+
+{: .center}
+![](/Blynk8266/011blynkButtonLED.png){:height="50%" width="50%"}
+
+
