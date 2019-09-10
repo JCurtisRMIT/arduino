@@ -198,11 +198,11 @@ Feel free to apply it to any other example. It's simple!
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth`[]` = "";
+char auth[] = "";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid`[]` = "";
+char ssid[] = "";
 char pass[] = "";
 
 // Select your pin with the button connected
@@ -275,7 +275,7 @@ Now tap the **LED Widget** and enter the **LED Widget Settings** page. We're goi
 Give it a try! Hit **Play** on your project and try holding the button while your board is supplied with power and connected to WiFi. 
 
 
-### Task
+## Task
 
 Use the circuit you have connected to create different events based on how many button presses are made.
 
@@ -289,3 +289,67 @@ Use the circuit you have connected to create different events based on how many 
 We've only scratched the surface here, there are all sorts of Widgets to choose from. You'll see that when selecting a Widget there is a white information box `[ i ]` for each Widget which gives you all sorts of handy tips for coding when using that Widget.
 
 There's even more information in the documentation (Links to an external site.). If you're stuck, the docs are always the first place you should look (Links to an external site.)!
+
+
+
+## Using Blynk on a Regular Arduino (With No WiFi Module)
+
+Even if you don't have a nice little WiFi module like we discussed above you can connect a regular Arduino to Blynk using your computer's WiFi over a USB cable. Ensure you have the Blynk app on your phone and have logged in and also have the Blynk Library installed as per the instructions earlier in the module.
+
+You can use the following sketch to make a connection:
+
+```
+/*************************************************************
+Download latest Blynk library here:
+https://github.com/blynkkk/blynk-library/releases/latest
+Blynk is a platform with iOS and Android apps to control
+Arduino, Raspberry Pi and the likes over the Internet.
+You can easily build graphic interfaces for all your
+projects by simply dragging and dropping widgets.
+Downloads, docs, tutorials: http://www.blynk.cc
+Sketch generator: http://examples.blynk.cc
+Blynk community: http://community.blynk.cc
+Follow us: http://www.fb.com/blynkapp
+http://twitter.com/blynk_app
+Blynk library is licensed under MIT license
+This example code is in public domain.
+*************************************************************
+=>
+=> USB HOWTO: http://tiny.cc/BlynkUSB
+=>
+Feel free to apply it to any other example. It's simple!
+*************************************************************/
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT DebugSerial
+
+
+// You could use a spare Hardware Serial on boards that have it (like Mega)
+#include <SoftwareSerial.h>
+SoftwareSerial DebugSerial(2, 3); // RX, TX
+
+#include <BlynkSimpleStream.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+``char auth[] = "YourAuthToken";``
+
+
+void setup()
+{
+// Debug console
+DebugSerial.begin(9600);
+
+// Blynk will work through Serial
+// Do not read or write this serial manually in your sketch
+Serial.begin(9600);
+Blynk.begin(Serial, auth);
+}
+
+void loop()
+{
+Blynk.run();
+}
+
+```
+
