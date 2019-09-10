@@ -43,14 +43,14 @@ two | bits
 Three Bits can store eight numbers / states: 
 
 three | bits
------ | -----
+----- | ----- | ----- | -----
 000	| 001	| 010	| 011
 100	| 101	| 110	| 111
 
 Four Bits can store sixteen numbers / states:
 
 four | bits
----- | ----
+---- | ---- | ---- | -----
 0000	| 0001	| 0010	| 0100
 1000	| 0101	| 0011	| 0110
 1001	| 1100	| 1010	| 0111
