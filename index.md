@@ -32,6 +32,9 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JCurtisRMIT/knowledgeRepo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+--------------------------
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+### Blynk & Arduino
+
+Blynk is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
