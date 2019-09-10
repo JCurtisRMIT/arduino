@@ -1,0 +1,487 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh7800\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://blynk.io/en/getting-started"}}{\fldrslt 
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 Blynk}}
+\f0\fs24 \cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3  is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.\
+\'a0\
+\pard\pardeftab720\sl280\sa240\qc\partightenfactor0
+\cf3 \pard\pardeftab720\sl280\sa240\qc\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf3 Getting Set up with Blynk\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 Firstly we're going to need to download the Blynk app for either Android or iPhone, it's a free download.\
+Once it's finished downloading, open up the app and create an account. Now, install the Blynk library using your Arduino IDE. We'll need it in a minute.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+Now there are a few ways to use Blynk. Blynk needs to connect to your Arduino (or other MCU) via the internet. There are {\field{\*\fldinst{HYPERLINK "https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 many}} supported hardware platforms that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet.\'a0\
+As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the {\field{\*\fldinst{HYPERLINK "https://www.jaycar.com.au/wifi-mini-esp8266-main-board/p/XC3802"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 D1 Mini}}.\'a0\
+There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the {\field{\*\fldinst{HYPERLINK "https://docs.blynk.cc/"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 documentation}} yourself go ahead and grab any one you like.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 What's great about the {\field{\*\fldinst{HYPERLINK "https://www.jaycar.com.au/wifi-mini-esp8266-main-board/p/XC3802"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 D1 Mini}} is that it has 11 GPIO pins on board and can run Arduino sketches. These pins are 3.3v logic level, but you can supply 5v to it (from USB or to the 5v pin) and the onboard regulator will safely supply the board with 3.3v. We're going to need to install a couple of things to get up and running first.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b \cf3 Serial drivers: 
+\f0\b0 The D1 Mini uses a CH340G USB-Serial IC- drivers for this can be downloaded from the IC\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://www.wch.cn/download/CH341SER_ZIP.html"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 manufacturer\'92s website}}. You may already have this installed if you've used an Arduino Nano with a CH340G chip on board.\
+
+\f1\b Arduino IDE Boards Manager: 
+\f0\b0 To use with the Arduino IDE, it is recommended to use version 1.6.4 or later so that the Boards\uc0\u8232 Manager can handle the installation. To install board support for ESP8266, in\u8232 File>Preferences>Additional Board Manager URLS add: 
+\f2\i http://arduino.esp8266.com/stable/package_esp8266com_index.json
+\f0\i0 \
+\'a0\
+\pard\pardeftab720\sl280\sa240\qc\partightenfactor0
+
+\f2\i \cf3 \pard\pardeftab720\sl280\sa240\qc\partightenfactor0
+
+\f0\i0 \cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b \cf3 ESP8266 Library:\'a0
+\f0\b0  Go to Tools > Boards > Boards Manager and type 'esp8266' in the search box.\'a0 Now install ESP8266 by ESP8266 Community (this is about 150MB download and can take a while).\'a0\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Tools > Board:\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 /*************************************************************\
+Download latest Blynk library here:\
+https://github.com/blynkkk/blynk-library/releases/latest\
+Blynk is a platform with iOS and Android apps to control\
+Arduino, Raspberry Pi and the likes over the Internet.\
+You can easily build graphic interfaces for all your\
+projects by simply dragging and dropping widgets.\
+Downloads, docs, tutorials: http://www.blynk.cc\
+Sketch generator: http://examples.blynk.cc\
+Blynk community: http://community.blynk.cc\
+Follow us: http://www.fb.com/blynkapp\
+http://twitter.com/blynk_app\
+Blynk library is licensed under MIT license\
+This example code is in public domain.\
+*************************************************************\
+This example runs directly on ESP8266 chip.\
+Note: This requires ESP8266 support package:\
+https://github.com/esp8266/Arduino\
+Please be sure to select the right ESP8266 module\
+in the Tools -> Board menu!\
+Change WiFi ssid, pass, and Blynk auth token to run :)\
+Feel free to apply it to any other example. It's simple!\
+*************************************************************/\
+\
+/* Comment this out to disable prints and save space */\
+#define BLYNK_PRINT Serial\
+\
+\
+#include <ESP8266WiFi.h>\
+#include <BlynkSimpleEsp8266.h>\
+\
+// You should get Auth Token in the Blynk App.\
+// Go to the Project Settings (nut icon).\
+char auth[] = "YourAuthToken";\
+\
+// Your WiFi credentials.\
+// Set password to "" for open networks.\
+char ssid[] = "YourNetworkName";\
+char pass[] = "YourPassword";\
+\
+void setup()\
+\{\
+// Debug console\
+Serial.begin(9600);\
+\
+Blynk.begin(auth, ssid, pass);\
+\}\
+\
+void loop()\
+\{\
+Blynk.run();\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+You'll see a couple of lines in the code that you'll need to change to get up and running. Firstly is your "Auth Token". This is the token that is generated in each project you make on Blynk.\
+Let's make a new project on our Blynk app. Then press the 'nut' icon to see Project Settings.\
+Under "Devices" add a new device and select 
+\f1\b WeMos D1 mini\'a0
+\f0\b0 with Connection Type 
+\f1\b WiFi
+\f0\b0 . You'll see your 
+\f1\b Auth Token
+\f0\b0  below. You can use the top field to name your device whatever you'd like.\
+If you don't feel like manually typing that really long string of characters and numbers you can have Blynk email you the Auth token using the Email button. Copy the token into line 34 of the Arduino code between the quotes.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 char auth[] = "YourAuthToken";\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+Now copy your WiFi SSID and Password into the following lines of the Arduino sketch. Your WiFi SSID is the name of your WiFi when you connect to it. Make sure to keep the quotes.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 char ssid[] = "YourNetworkName";\
+char pass[] = "YourPassword";\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+Now save your sketch and run it. Open up the Serial Monitor in the Arduino IDE at 9600 baud and watch as your new D1 mini connects to the internet using your WiFi, it may take a second or two.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+If you see a similar screen in your Serial Monitor you've successfully connected to Blynk! Take a look in your app and press the "Play" button in the top right hand corner. After you've done this, if you tap the icon next to it (that looks like an Arduino Uno)\'a0 you'll be able to see that your device you named earlier is now Online.\
+Great, now lets explore simple connections between your phone and Blynk.\
+\'a0\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf3 Sending Data \ul From\ulnone  The Blynk App\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 First let's make a simple circuit with an LED and a resistor. Make sure you unplug your D1 Mini when changing the circuit. It's bad practice to leave a circuit powered whilst changing connections.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 Now in the Blynk app, ensure you project isn't running using the 
+\f1\b Stop
+\f0\b0  button in the top right hand corner. Tap your finger in the project space grid to open the 
+\f1\b Widget box
+\f0\b0 . Here you can select all sorts of widgets to use in your project. Take note of any that you may want to use later.\
+Select 
+\f1\b Button
+\f0\b0  and it will now appear in your project. You can tap the 
+\f1\b Button
+\f0\b0  widget in your project to change its settings.\'a0\
+We're going to tap the 
+\f1\b Output
+\f0\b0  section and change the Pin to 
+\f1\b Digital Pin: D1
+\f0\b0 \
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+Now close the 
+\f1\b Button Settings
+\f0\b0  menu by hitting OK. Go ahead and plug your 
+\f1\b D1 Mini
+\f0\b0  into power, check the 
+\f1\b Serial Monitor
+\f0\b0  again to see that it connects successfully to your WiFi. Once it has, you can hit 
+\f1\b Play
+\f0\b0  now in your project and try tapping the button on the Blynk app.\
+Voila! Notice how we didn't need to write any code in the Arduino IDE for 
+\f1\b pinMode()
+\f0\b0  and 
+\f1\b digitalWrite()
+\f0\b0  like usual? The Blynk library takes care of some of this stuff so we can prototype some functionality just using the app.\
+\'a0\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf3 Sending Data \ul To\ulnone  The Blynk App\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 Now we're going to explore a Blynk concept called {\field{\*\fldinst{HYPERLINK "https://docs.blynk.cc/#blynk-main-operations-virtual-pins"}}{\fldrslt 
+\f1\b \cf2 \ul \ulc2 \strokec2 Virtual Pins}}.\'a0 Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that Virtual Pins are 
+\f2\i in addition to
+\f0\i0  the Digital Pins you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. Virtual Pins can also be used to interface with external libraries (Servo, LCD and others) and implement custom functionality.\
+Make the following circuit:\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+Now send the following sketch to your board:\
+Remember to fill in your 
+\f1\b Auth Token
+\f0\b0 , 
+\f1\b SSID
+\f0\b0  & 
+\f1\b Password
+\f0\b0  in the appropriate lines.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 /*************************************************************\
+Download latest Blynk library here:\
+https://github.com/blynkkk/blynk-library/releases/latest\
+Blynk is a platform with iOS and Android apps to control\
+Arduino, Raspberry Pi and the likes over the Internet.\
+You can easily build graphic interfaces for all your\
+projects by simply dragging and dropping widgets.\
+Downloads, docs, tutorials: http://www.blynk.cc\
+Sketch generator: http://examples.blynk.cc\
+Blynk community: http://community.blynk.cc\
+Follow us: http://www.fb.com/blynkapp\
+http://twitter.com/blynk_app\
+Blynk library is licensed under MIT license\
+This example code is in public domain.\
+*************************************************************\
+This example runs directly on ESP8266 chip.\
+Note: This requires ESP8266 support package:\
+https://github.com/esp8266/Arduino\
+Please be sure to select the right ESP8266 module\
+in the Tools -> Board menu!\
+Change WiFi ssid, pass, and Blynk auth token to run :)\
+Feel free to apply it to any other example. It's simple!\
+*************************************************************/\
+\
+/* Comment this out to disable prints and save space */\
+#define BLYNK_PRINT Serial\
+\
+\
+#include <ESP8266WiFi.h>\
+#include <BlynkSimpleEsp8266.h>\
+\
+// You should get Auth Token in the Blynk App.\
+// Go to the Project Settings (nut icon).\
+char auth[] = "";\
+\
+// Your WiFi credentials.\
+// Set password to "" for open networks.\
+char ssid[] = "";\
+char pass[] = "";\
+\
+// Select your pin with the button connected\
+const int btnPin = D1;\
+\
+// Making a new variable for our WidgetLED on Virtual Pin 0\
+WidgetLED led1(V0);\
+\
+// We need a timer in our sketch \
+BlynkTimer timer;\
+\
+// Making a boolean to store the state of our button (on or off)\
+bool btnState = false;\
+\
+void buttonLEDWidget()\
+\{\
+// This function is called using the timer we set up above\
+\
+// first we read the digital pin to see if the state has changed\
+bool isPressed = (digitalRead(btnPin) == LOW);\
+\
+// if the current state of the button is different to last check\
+if (isPressed != btnState) \{\
+if (isPressed) \{\
+led1.on();\
+\} else \{\
+led1.off();\
+\}\
+btnState = isPressed; // set our button state to whichever it is now\
+\}\
+\}\
+\
+void setup()\
+\{\
+// Debug console\
+Serial.begin(9600);\
+\
+Blynk.begin(auth, ssid, pass);\
+\
+// This pinMode allows us to use the onboard resistor\
+// but our logic is reversed: HIGH is off, LOW is on.\
+pinMode(btnPin, INPUT_PULLUP);\
+\
+// Our timer is called twice per second.\
+// Our buttonLEDWidget() function we wrote above \
+// is called once per timer interval \
+// Avoid setting timers faster than this\
+// You may trigger a "Flood Error" and Blynk will disconnect you.\
+timer.setInterval(500L, buttonLEDWidget); \
+\}\
+\
+void loop()\
+\{\
+Blynk.run();\
+timer.run(); \
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+Take care to read the comments in all of the new parts of the code. We have some basic logic for flipping the state of the button, a custom function called 
+\f1\b buttonLEDWidget()\'a0
+\f0\b0 which is attached to a 
+\f1\b timer\'a0
+\f0\b0 and a new type of data structure 
+\f1\b WidgetLED
+\f0\b0  which we've attached to the variable 
+\f1\b led1 
+\f0\b0 set to Virtual Pin 0
+\f1\b  (V0
+\f0\b0 )\
+Every half second, the sketch will check to see if the state of the button has changed. If it has, we're calling 
+\f1\b led1.on()\'a0
+\f0\b0 - else we're turning the 
+\f1\b led1.off()
+\f0\b0 \
+Let's see it in action. In your Blynk project, delete the 
+\f1\b Button
+\f0\b0  from the last section and add an 
+\f1\b LED
+\f0\b0  Widget from the 
+\f1\b Displays
+\f0\b0  section. You can resize it in the project space too, make it nice and big.\
+Now tap the 
+\f1\b LED
+\f0\b0  Widget and enter the 
+\f1\b LED Widget Settings
+\f0\b0  page. We're going to change the 
+\f1\b INPUT\'a0
+\f0\b0 to 
+\f1\b V0.\'a0
+\f0\b0 Notice that you can only use Virtual Pins here? As mentioned above, the Virtual Pins act as a "middleman" between your board's code and the Widgets in your app. In most cases you'll need a Virtual Pin to make changes like this.\
+\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 \'a0\
+Give it a try! Hit 
+\f1\b Play\'a0
+\f0\b0 on your project and try holding the button while your board is supplied with power and connected to WiFi.\'a0\
+\pard\pardeftab720\sl440\sa298\partightenfactor0
+
+\f1\b\fs36 \cf3 Task\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 Use the circuit you have connected to create different events based on how many button presses are made.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Use Four LED Widgets to indicate button presses.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 When the button is pressed a fifth time, clear all of the LED Widgets and start again.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf3 You can use {\field{\*\fldinst{HYPERLINK "https://www.arduino.cc/en/Tutorial/StateChangeDetection"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 this guide}} to help, but don't copy/paste. Break down the code piece by piece using the comments to help you. You will need to adjust your code to work with Blynk's timer.\
+\'a0\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf3 Going Further\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 We've only scratched the surface here, there are all sorts of Widget
+\f1\b s
+\f0\b0  to choose from. You'll see that when selecting a 
+\f1\b Widget
+\f0\b0  there is a white information box 
+\f1\b [ i ] 
+\f0\b0 for each Widget which gives you all sorts of handy tips for coding when using that Widget.\
+There's even more information in the {\field{\*\fldinst{HYPERLINK "https://docs.blynk.cc/#widgets"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 documentation}}. If you're stuck, the docs are always the first place {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/RTFM"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 you should look}}!\
+\'a0\
+\'a0\
+\pard\pardeftab720\sl440\sa298\partightenfactor0
+
+\f1\b\fs36 \cf3 Using Blynk on a Regular Arduino (With No WiFi Module)\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf3 Even if you don't have a nice little WiFi module like we discussed above you can connect a regular Arduino to Blynk using your computer's WiFi over a USB cable. Ensure you have the Blynk app on your phone and have logged in and also have the Blynk Library installed as per the instructions earlier in the module.\
+You can use the following sketch to make a connection:\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 /*************************************************************\
+Download latest Blynk library here:\
+https://github.com/blynkkk/blynk-library/releases/latest\
+Blynk is a platform with iOS and Android apps to control\
+Arduino, Raspberry Pi and the likes over the Internet.\
+You can easily build graphic interfaces for all your\
+projects by simply dragging and dropping widgets.\
+Downloads, docs, tutorials: http://www.blynk.cc\
+Sketch generator: http://examples.blynk.cc\
+Blynk community: http://community.blynk.cc\
+Follow us: http://www.fb.com/blynkapp\
+http://twitter.com/blynk_app\
+Blynk library is licensed under MIT license\
+This example code is in public domain.\
+*************************************************************\
+=>\
+=> USB HOWTO: http://tiny.cc/BlynkUSB\
+=>\
+Feel free to apply it to any other example. It's simple!\
+*************************************************************/\
+\
+/* Comment this out to disable prints and save space */\
+#define BLYNK_PRINT DebugSerial\
+\
+\
+// You could use a spare Hardware Serial on boards that have it (like Mega)\
+#include <SoftwareSerial.h>\
+SoftwareSerial DebugSerial(2, 3); // RX, TX\
+\
+#include <BlynkSimpleStream.h>\
+\
+// You should get Auth Token in the Blynk App.\
+// Go to the Project Settings (nut icon).\
+char auth[] = "YourAuthToken";\
+\
+\
+void setup()\
+\{\
+// Debug console\
+DebugSerial.begin(9600);\
+\
+// Blynk will work through Serial\
+// Do not read or write this serial manually in your sketch\
+Serial.begin(9600);\
+Blynk.begin(Serial, auth);\
+\}\
+\
+void loop()\
+\{\
+Blynk.run();\
+\}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+Remember to change this line of code to your 
+\f1\b Auth Token
+\f0\b0  as described earlier in the module above.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3 \cf3 char auth[] = "YourAuthToken";\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0 \cf3 \'a0\
+Before anything will work, you'll need to run some extra stuff. Depending on your platform (Windows or MacOS) you'll need to do these differently. Follow the steps in the guide here and take care to set up your system correctly.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 https://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield}}\
+\'a0\
+Once this is going, you can now check the app to see if your device is online! Go back to the top and complete the tasks above using the {\field{\*\fldinst{HYPERLINK "https://github.com/blynkkk/blynk-library/blob/master/examples/Boards_USB_Serial/Arduino_Serial_USB/Arduino_Serial_USB.ino"}}{\fldrslt \cf2 \ul \ulc2 \strokec2 Blynk Over USB sketch}} as a basis.\'a0\
+Happy Blynking!\
+\'a0\
+\'a0\
+}
