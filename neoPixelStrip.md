@@ -1,4 +1,5 @@
 ###Adafruit NeoPixel Strips
+
 [NeoPixels](https://learn.adafruit.com/adafruit-neopixel-uberguide) are an LED product by Adafruit.  Each LED actually contains a small microprocessor which allows each LED in the chain to be individually addressed allowing us to change the LED colour and brightness. We will be using the NeoPixel Stick with 8 LEDs.
 
  
@@ -157,4 +158,5 @@ Try breathing on your temperature sensor. See if you can raise the temperature! 
  
 
 ##Challenge
+
 Since we can't really breathe at 40 degrees celsius, let's try changing some values here to make our NeoPixels more responsive. Take a careful look through the code and see which values you might need to change.
