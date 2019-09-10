@@ -2,46 +2,42 @@
 
 [NeoPixels](https://learn.adafruit.com/adafruit-neopixel-uberguide) are an LED product by Adafruit.  Each LED actually contains a small microprocessor which allows each LED in the chain to be individually addressed allowing us to change the LED colour and brightness. We will be using the NeoPixel Stick with 8 LEDs.
 
- 
+{: .center}
+![](/assets/basics/neopixelstick.jpg){:height="50%" width="50%"}
 
-neopixelstick
+The NeoPixels generally have 4 pins: the 2 outside pins are **GND** (we only need to connect to one of these), the remaining pins are **5v** and **DIN** (digital in). 
 
- 
-
-The NeoPixels generally have 4 pins: the 2 outside pins are GND (we only need to connect to one of these), the remaining pins are 5v and DIN (digital in). At the opposite end of the strip DIN becomes DOUT (digital out), connect DOUT to another NeoPixel Strip's DIN pin to string multiple sticks together.
+At the opposite end of the strip **DIN** becomes **DOUT** (digital out), connect **DOUT** to another NeoPixel Strip's **DIN** pin to string multiple sticks together.
 
  
 
 Connect the NeoPixel to the Arduino like this:
 
-neopixelsCircuit
+{: .center}
+![](/assets/basics/NeoPixel%20Stick_bb.jpg){:height="50%" width="50%"}
+
+
+
+Before anything happens we'll need to install the NeoPixels library using the **Arduino library manager**. 
+
+In Simply navigate to **"Sketch" >> "Include Library" >> "Manage Libraries"** from the pulldown menu in the Arduino IDE.
+
+{: .center}
+![](/assets/basics/manageLibraries.png){:height="50%" width="50%"}
 
  
 
- 
-
-Before anything happens we'll need to install the NeoPixels library using the Arduino library manager. In Simply navigate to "Sketch" >> "Include Library" >> "Manage Libraries" from the pulldown menu in the Arduino IDE.
+Search for **"neopixel"** and ensure you select the _official NeoPixel library by Adafruit_ as shown, then install it.
 
  
+{: .center}
+![](/assets/basics/neoPixelLibrary.png){:height="50%" width="50%"}
 
-Libraries
-
- 
-
-Search for "neopixel" and ensure you select the official NeoPixel library by Adafruit as shown, then install it.
-
- 
-
-NeoPixelsLibrary
-
- 
-
- 
 
 We're now ready to work with NeoPixels. Try uploading the following to your Arduino via the IDE.
 
  
-
+```c++
 #include <Adafruit_NeoPixel.h>
 
 const int PIN = 6;
@@ -61,17 +57,20 @@ void loop() {
  delay(500);
  }
 }
- 
+``` 
 
-This code changes each LED in the strip to a moderately bright green colour every half second using a for loop. For loops are a very common (and powerful) method to iterate numerically over a procedure. In our case this is changing each LED by its number location, known as an index. This is why it is common to see the integer variable in a for loop declared as i.
+This code changes each LED in the strip to a moderately bright green colour every half second using a for loop. 
 
- 
-
-Let's try also connecting up our analog temperature sensor from earlier (TMP36) as shown.
+**_For loops_** are a very common (and powerful) method to iterate numerically over a procedure. In our case this is changing each LED by its number location, known as an index. This is why it is common to see the integer variable in a **for loop** declared as **i**.
 
  
 
-NeoPixelStickTMP36
+Let's try also connecting up our analog temperature sensor from earlier **(TMP36)** as shown.
+
+ 
+
+{: .center}
+![](/assets/basics/NeoPixelAnalogTempSensor_bb.png){:height="50%" width="50%"}
 
  
 
@@ -149,11 +148,14 @@ delay(25);
 }
 ``` 
 
-You may notice we've been able to reuse parts of our code from the previous exercise using this sensor. We're using the same process to poll the Analog 0 pin for the temperature reading and mapping and constraining the variables redValue, greenValue and blueValue. 
+You may notice we've been able to reuse parts of our code from the previous exercise using this sensor. 
+
+We're using the same process to poll the **Analog 0** pin for the temperature reading and **_mapping_** and **_constraining_** the variables **redValue**, **greenValue** and **blueValue**. 
 
 We're also mapping the length of the strip to the the temperature reading (out of 40) and storing it in the variable np. Inside the for loop we're determining how many LEDs to light up in the strip using a conditional if statement. 
 
-Try breathing on your temperature sensor. See if you can raise the temperature! Use the serial monitor to check the actual value in Celsius. 
+Try breathing on your temperature sensor. See if you can raise the temperature! 
+Use the serial monitor to check the actual value in Celsius. 
 
  
 
