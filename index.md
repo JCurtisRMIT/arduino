@@ -155,7 +155,7 @@ Voila! Notice how we didn't need to write any code in the Arduino IDE for **pinM
 
 ## Sending Data To The Blynk App
 
-Now we're going to explore a Blynk concept called **Virtual Pins** .  Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that **Virtual Pins** are in addition to the **Digital Pins** you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. 
+Now we're going to explore a Blynk concept called [**Virtual Pins**](https://docs.blynk.cc/#blynk-main-operations-virtual-pins) .  Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that **Virtual Pins** are in addition to the **Digital Pins** you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. 
 
 Virtual Pins can also be used to interface with external libraries (Servo, LCD and others) and implement custom functionality.
 
@@ -291,9 +291,9 @@ Use the circuit you have connected to create different events based on how many 
  
 
 ### Going Further
-We've only scratched the surface here, there are all sorts of Widgets to choose from. You'll see that when selecting a Widget there is a white information box `[ i ]` for each Widget which gives you all sorts of handy tips for coding when using that Widget.
+We've only scratched the surface here, there are all sorts of [**Widgets**](https://docs.blynk.cc/#widgets) to choose from. You'll see that when selecting a Widget there is a white information box `[ i ]` for each Widget which gives you all sorts of handy tips for coding when using that Widget.
 
-There's even more information in the documentation (Links to an external site.). If you're stuck, the docs are always the first place you should look (Links to an external site.)!
+There's even more information in the documentation. If you're stuck, the docs are always the first place you should look!
 
 
 
@@ -369,6 +369,6 @@ Before anything will work, you'll need to run some extra stuff. Depending on you
 
  
 
-Once this is going, you can now check the app to see if your device is online! Go back to the top and complete the tasks above using the Blynk Over USB sketch (Links to an external site.) as a basis. 
+Once this is going, you can now check the app to see if your device is online! Go back to the top and complete the tasks above using the [**Blynk Over USB sketch**](https://github.com/blynkkk/blynk-library/blob/master/examples/Boards_USB_Serial/Arduino_Serial_USB/Arduino_Serial_USB.ino) as a basis. 
 
 Happy Blynking!
