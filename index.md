@@ -59,17 +59,17 @@ What's great about the D1 Mini is that it has 11 GPIO pins on board and can run 
 
 To install board support for ESP8266, in _File>Preferences>Additional Board Manager URLS_ add: http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/004%20boardsManager.png)
+![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/004%20boardsManager.png)
 
 **ESP8266 Library**:  Go to Tools > Boards > Boards Manager and type 'esp8266' in the search box.  Now install ESP8266 by ESP8266 Community (this is about 150MB download and can take a while). 
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/005%20boardsManager1.png)
+![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/005%20boardsManager1.png)
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/006%20boardsManager2.png)
+![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/006%20boardsManager2.png)
 
 You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Tools > Board:
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/007%20d1MiniBoard.png)
+![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/007%20d1MiniBoard.png)
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
