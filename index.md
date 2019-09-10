@@ -105,7 +105,9 @@ Under "**Devices**" add a new device and select **WeMos D1 mini** with Connectio
 
 If you don't feel like manually typing that really long string of characters and numbers you can have Blynk email you the Auth token using the Email button. Copy the token into line 34 of the Arduino code between the quotes.
 
-```char auth[] = "YourAuthToken";```
+```
+char auth[] = "YourAuthToken";
+```
 
 Now copy your WiFi SSID and Password into the following lines of the Arduino sketch. Your WiFi SSID is the name of your WiFi when you connect to it. Make sure to keep the quotes.
 
