@@ -5,20 +5,20 @@
 {: .center}
 ![](/assets/basics/neopixelstick.jpg){:height="50%" width="50%"}
 
-The NeoPixels generally have 4 pins: the 2 outside pins are **GND** (we only need to connect to one of these), the remaining pins are **5v** and **DIN** (digital in). 
+The NeoPixels generally have 4 pins: the 2 outside pins are _GND_ (we only need to connect to one of these), the remaining pins are _5v_ and _DIN_ (digital in). 
 
-At the opposite end of the strip **DIN** becomes **DOUT** (digital out), connect **DOUT** to another NeoPixel Strip's **DIN** pin to string multiple sticks together.
+At the opposite end of the strip _DIN_ becomes _DOUT_ (digital out), connect _DOUT_ to another NeoPixel Strip's _DIN_ pin to string multiple sticks together.
 
  
 
 Connect the NeoPixel to the Arduino like this:
 
 {: .center}
-![](/assets/basics/NeoPixel%20Stick_bb.jpg){:height="50%" width="50%"}
+![](/assets/basics/NeoPixelStick_bb.jpg){:height="50%" width="50%"}
 
 
 
-Before anything happens we'll need to install the NeoPixels library using the **Arduino library manager**. 
+Before anything happens we'll need to install the NeoPixels library using the _Arduino library manager_. 
 
 In Simply navigate to **"Sketch" >> "Include Library" >> "Manage Libraries"** from the pulldown menu in the Arduino IDE.
 
@@ -150,7 +150,7 @@ delay(25);
 
 You may notice we've been able to reuse parts of our code from the previous exercise using this sensor. 
 
-We're using the same process to poll the **Analog 0** pin for the temperature reading and **_mapping_** and **_constraining_** the variables **redValue**, **greenValue** and **blueValue**. 
+We're using the same process to poll the **Analog 0** pin for the temperature reading and **_mapping_** and **_constraining_** the variables _redValue_, _greenValue_ and _blueValue_. 
 
 We're also mapping the length of the strip to the the temperature reading (out of 40) and storing it in the variable np. Inside the for loop we're determining how many LEDs to light up in the strip using a conditional if statement. 
 
@@ -161,4 +161,6 @@ Use the serial monitor to check the actual value in Celsius.
 
 ## Challenge
 
-Since we can't really breathe at 40 degrees celsius, let's try changing some values here to make our NeoPixels more responsive. Take a careful look through the code and see which values you might need to change.
+Since we can't really breathe at 40 degrees celsius, let's try changing some values here to make our NeoPixels more responsive. 
+
+Take a careful look through the code and see which values you might need to change.
