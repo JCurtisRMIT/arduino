@@ -2,7 +2,7 @@
 
 1. Introduction to Arduino
 
-2. Analog vs Digital + Data Handling Techniques
+2. [Analog vs Digital + Data Handling Techniques](/analogVsDigital.md)
 
 3. [Analog Temp Sensor (TMP65)](/analogTempSensor.md)
 
