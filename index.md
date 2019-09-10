@@ -35,10 +35,10 @@ To install board support for ESP8266, in _File>Preferences>Additional Board Mana
 ![Boards Manager](/Blynk8266/006boardsManager2.png)
 
 You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Tools > Board:
-{: .center}
-![](/Blynk8266/007d1MiniBoard.png){:class="img-responsive"}
-![](/Blynk8266/007d1MiniBoard.png){:height="10%" width="10%"}
-![](/Blynk8266/007d1MiniBoard.png){:height="700px" width="400px"}
+
+![](/Blynk8266/007d1MiniBoard.png){:class="img-responsive"}{: .center}
+![](/Blynk8266/007d1MiniBoard.png){:height="10%" width="10%"}{: .center}
+![](/Blynk8266/007d1MiniBoard.png){:height="700px" width="400px"}{: .center}
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
