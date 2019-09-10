@@ -39,7 +39,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Blynk is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/001%20blynkarchitecture.png)
+![Blynk Architecture](/Blynk%208266/001%20blynkarchitecture.png)
 
 ### Getting Set up with Blynk
 
