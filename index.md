@@ -47,7 +47,7 @@ You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Too
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
-```
+```arduino
 /*************************************************************
 Download latest Blynk library here:
 https://github.com/blynkkk/blynk-library/releases/latest
