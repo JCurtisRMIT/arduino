@@ -1,12 +1,3 @@
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JCurtisRMIT/knowledgeRepo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
---------------------------
-
-
 ## Blynk & Arduino
 
 Blynk is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
@@ -19,7 +10,11 @@ Firstly we're going to need to download the Blynk app for either Android or iPho
 
 ![Blynk Library](/Blynk8266/002blynkLibrary.png)
 
-Now there are a few ways to use Blynk. Blynk needs to connect to your Arduino (or other MCU) via the internet. There are many supported hardware platforms that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet. As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the D1 Mini. There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the documentation yourself go ahead and grab any one you like.
+Now there are a few ways to use Blynk. Blynk needs to connect to your Arduino (or other MCU) via the internet. 
+
+There are many supported hardware platforms that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet. (See below)
+
+As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the D1 Mini. There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the documentation yourself go ahead and grab any one you like.
 
 ![d1 Mini](/Blynk8266/003d1Mini.png)
 
@@ -46,5 +41,56 @@ You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Too
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
 ```markdown
-`/*************************************************************Download latest Blynk library here:https://github.com/blynkkk/blynk-library/releases/latestBlynk is a platform with iOS and Android apps to controlArduino, Raspberry Pi and the likes over the Internet.You can easily build graphic interfaces for all yourprojects by simply dragging and dropping widgets.Downloads, docs, tutorials: http://www.blynk.ccSketch generator: http://examples.blynk.ccBlynk community: http://community.blynk.ccFollow us: http://www.fb.com/blynkapphttp://twitter.com/blynk_appBlynk library is licensed under MIT licenseThis example code is in public domain.*************************************************************This example runs directly on ESP8266 chip.Note: This requires ESP8266 support package:https://github.com/esp8266/ArduinoPlease be sure to select the right ESP8266 modulein the Tools -> Board menu!Change WiFi ssid, pass, and Blynk auth token to run :)Feel free to apply it to any other example. It's simple!*************************************************************//* Comment this out to disable prints and save space */#define BLYNK_PRINT Serial#include <ESP8266WiFi.h>#include <BlynkSimpleEsp8266.h>// You should get Auth Token in the Blynk App.// Go to the Project Settings (nut icon).char auth[] = "YourAuthToken";// Your WiFi credentials.// Set password to "" for open networks.char ssid[] = "YourNetworkName";char pass[] = "YourPassword";void setup(){// Debug consoleSerial.begin(9600);Blynk.begin(auth, ssid, pass);}void loop(){Blynk.run();}`
+/*************************************************************
+Download latest Blynk library here:
+https://github.com/blynkkk/blynk-library/releases/latest
+Blynk is a platform with iOS and Android apps to control
+Arduino, Raspberry Pi and the likes over the Internet.
+You can easily build graphic interfaces for all your
+projects by simply dragging and dropping widgets.
+Downloads, docs, tutorials: http://www.blynk.cc
+Sketch generator: http://examples.blynk.cc
+Blynk community: http://community.blynk.cc
+Follow us: http://www.fb.com/blynkapp
+http://twitter.com/blynk_app
+Blynk library is licensed under MIT license
+This example code is in public domain.
+*************************************************************
+This example runs directly on ESP8266 chip.
+Note: This requires ESP8266 support package:
+https://github.com/esp8266/Arduino
+Please be sure to select the right ESP8266 module
+in the Tools -> Board menu!
+Change WiFi ssid, pass, and Blynk auth token to run :)
+Feel free to apply it to any other example. It's simple!
+*************************************************************/
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
+
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "YourAuthToken";
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
+
+void setup()
+{
+// Debug console
+Serial.begin(9600);
+
+Blynk.begin(auth, ssid, pass);
+}
+
+void loop()
+{
+Blynk.run();
+}
 ```
