@@ -1,6 +1,6 @@
 ## Blynk & Arduino
 
-![Blynk](https://blynk.io/) is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
+[Blynk](https://blynk.io/) is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
 
 ![Blynk Architecture](/Blynk8266/001blynkarchitecture.png)
 
@@ -361,7 +361,7 @@ Remember to change this line of code to your Auth Token as described earlier in 
 
 Before anything will work, you'll need to run some extra stuff. Depending on your platform (Windows or MacOS) you'll need to do these differently. Follow the steps in the guide here and take care to set up your system correctly.
 
-![](https://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield)
+[](https://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield)
 
  
 
