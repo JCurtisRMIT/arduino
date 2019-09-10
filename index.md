@@ -1,6 +1,6 @@
 ## Blynk & Arduino
 
-Blynk is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
+![Blynk](https://blynk.io/) is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
 
 ![Blynk Architecture](/Blynk8266/001blynkarchitecture.png)
 
@@ -24,7 +24,8 @@ What's great about the D1 Mini is that it has 11 GPIO pins on board and can run 
 
 **Arduino IDE Boards Manager**: To use with the Arduino IDE, it is recommended to use version 1.6.4 or later so that the BoardsManager can handle the installation. 
 
-To install board support for ESP8266, in _File>Preferences>Additional Board Manager URLS_ add: http://arduino.esp8266.com/stable/package_esp8266com_index.json
+To install board support for ESP8266, in _File>Preferences>Additional Board Manager URLS_ add:
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 ![Boards Manager](/Blynk8266/004boardsManager.png)
 
@@ -42,7 +43,7 @@ You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Too
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
-```markdown
+```
 /*************************************************************
 Download latest Blynk library here:
 https://github.com/blynkkk/blynk-library/releases/latest
@@ -150,7 +151,7 @@ Voila! Notice how we didn't need to write any code in the Arduino IDE for pinMod
 
 ## Sending Data To The Blynk App
 
-Now we're going to explore a Blynk concept called **Virtual Pins** (Links to an external site.).  Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that **Virtual Pins** are in addition to the **Digital Pins** you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. 
+Now we're going to explore a Blynk concept called **Virtual Pins** .  Virtual Pins allow you to send data to and from the app in a way that the app can understand. It's important to note that **Virtual Pins** are in addition to the **Digital Pins** you have on your board, hence Virtual. Think of these pins as the information handlers between the Widgets in your project and your board. 
 
 Virtual Pins can also be used to interface with external libraries (Servo, LCD and others) and implement custom functionality.
 
