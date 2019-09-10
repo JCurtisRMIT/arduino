@@ -332,7 +332,7 @@ SoftwareSerial DebugSerial(2, 3); // RX, TX
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-``char auth[] = "YourAuthToken";``
+char auth[] = "YourAuthToken";
 
 
 void setup()
@@ -353,3 +353,17 @@ Blynk.run();
 
 ```
 
+Remember to change this line of code to your Auth Token as described earlier in the module above.
+
+```char auth[] = "YourAuthToken";```
+ 
+
+Before anything will work, you'll need to run some extra stuff. Depending on your platform (Windows or MacOS) you'll need to do these differently. Follow the steps in the guide here and take care to set up your system correctly.
+
+![](https://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield)
+
+ 
+
+Once this is going, you can now check the app to see if your device is online! Go back to the top and complete the tasks above using the Blynk Over USB sketch (Links to an external site.) as a basis. 
+
+Happy Blynking!
