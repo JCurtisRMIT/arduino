@@ -45,11 +45,11 @@ Blynk is a free application that allows you to quickly make a connection between
 
 Firstly we're going to need to download the Blynk app for either Android or iPhone, it's a free download.Once it's finished downloading, open up the app and create an account. Now, install the Blynk library using your Arduino IDE. We'll need it in a minute.
 
-![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk8266/002blynkLibrary.png)
+![Blynk Library](/Blynk8266/002blynkLibrary.png)
 
 Now there are a few ways to use Blynk. Blynk needs to connect to your Arduino (or other MCU) via the internet. There are many supported hardware platforms that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet. As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the D1 Mini. There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the documentation yourself go ahead and grab any one you like.
 
-![Image](https://github.com/JCurtisRMIT/knowledge/blob/master/Blynk8266/003d1Mini.png)
+![d1 Mini](/Blynk8266/003d1Mini.png)
 
 What's great about the D1 Mini is that it has 11 GPIO pins on board and can run Arduino sketches. These pins are 3.3v logic level, but you can supply 5v to it (from USB or to the 5v pin) and the onboard regulator will safely supply the board with 3.3v. We're going to need to install a couple of things to get up and running first.
 
@@ -59,7 +59,7 @@ What's great about the D1 Mini is that it has 11 GPIO pins on board and can run 
 
 To install board support for ESP8266, in _File>Preferences>Additional Board Manager URLS_ add: http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-![Image](http://github.com/JCurtisRMIT/knowledge/blob/master/Blynk%208266/004%20boardsManager.png)
+![Boards Manager](/Blynk8266/004boardsManager.png)
 
 **ESP8266 Library**:  Go to Tools > Boards > Boards Manager and type 'esp8266' in the search box.  Now install ESP8266 by ESP8266 Community (this is about 150MB download and can take a while). 
 
