@@ -118,3 +118,26 @@ char pass[] = "YourPassword";
 
 Now save your sketch and run it. Open up the Serial Monitor in the Arduino IDE at 9600 baud and watch as your new D1 mini connects to the internet using your WiFi, it may take a second or two.
 
+{: .center}
+![](/Blynk8266/008blynkWifi.png){:height="50%" width="50%"}
+
+If you see a similar screen in your Serial Monitor you've successfully connected to Blynk! Take a look in your app and press the "Play" button in the top right hand corner. After you've done this, if you tap the icon next to it (that looks like an Arduino Uno)  you'll be able to see that your device you named earlier is now Online.
+
+Great, now lets explore simple connections between your phone and Blynk.
+
+
+# Sending Data From The Blynk App
+
+First let's make a simple circuit with an LED and a resistor. Make sure you unplug your D1 Mini when changing the circuit. It's bad practice to leave a circuit powered whilst changing connections.
+
+{: .center}
+![](/Blynk8266/009blynkLED.png){:height="50%" width="50%"}
+
+Now in the Blynk app, ensure you project isn't running using the **Stop** button in the top right hand corner. Tap your finger in the project space grid to open the **Widget box**. Here you can select all sorts of widgets to use in your project. Take note of any that you may want to use later.
+
+Select **Button** and it will now appear in your project. You can tap the Button widget in your project to change its settings. 
+
+We're going to tap the **Output** section and change the Pin to **Digital Pin: D1**
+
+{: .center}
+![](/Blynk8266/010blynkButton.jpg){:height="50%" width="50%"}
