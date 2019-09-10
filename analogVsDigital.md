@@ -212,7 +212,7 @@ void loop()
 ### for loops
 We can actually create our own loops of functionality inside our main loop to perform repeated routines incrementally. This is very useful for increasing or decreasing numbers procedurally too. Let's say we'd like to slowly fade up an LED using PWM to control the brightness. We can use some for loops to control the brightness as it increases and decreases.
 
-_Note: if you build the circuit for this code place a 220ohm resistor in series with the cathode leg (Links to an external site.) and ground. This will protect the LED from burning out. The anode leg (Links to an external site.) of the LED is connected to digital pin 9._
+_Note: if you build the circuit for this code place a 220ohm resistor in series with the [cathode leg](https://learn.sparkfun.com/tutorials/polarity/diode-and-led-polarity) and ground. This will protect the LED from burning out. The [anode leg](https://learn.sparkfun.com/tutorials/polarity/diode-and-led-polarity) of the LED is connected to digital pin 9._
 
  
 ```c++
@@ -244,9 +244,9 @@ void loop() {
 ## Smoothing Noisy Data
 Sometimes you'll notice that your sensor data is a bit jittery or noisy. A really handy function to have is a smoothing function. Arduino doesn't actually have one in its stock library, however you can build your own simple smoothing function by collecting some data over time, then averaging it. Simply collect a specified number of sensor readings using a for loop by adding them together, then divide the total by the number of readings. ie: the mean average.
 
-The following example calls a custom function called smooth() that we define ourselves before the main loop(). Try this with a jittery sensor and experiment with different amounts of readings; a larger amount of readings will produce a better average - but will be slower in its response.
+The following example calls a custom function called **smooth()** that we define ourselves before the main loop(). Try this with a jittery sensor and experiment with different amounts of readings; a larger amount of readings will produce a better average - but will be slower in its response.
 
-_Note: The Arduino compiler is a bit fussy about scope (Links to an external site.) if you define a function underneath (which is common in other languages). This is why our smooth() function is defined above setup()_
+_Note: The Arduino compiler is a bit fussy about [scope](https://www.arduino.cc/en/pmwiki.php?n=Reference/Scope) if you define a function underneath (which is common in other languages). This is why our smooth() function is defined above setup()_
 
  
 ```c++
