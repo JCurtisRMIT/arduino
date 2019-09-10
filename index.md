@@ -160,3 +160,132 @@ Make the following circuit:
 ![](/Blynk8266/011blynkButtonLED.png){:height="50%" width="50%"}
 
 
+Now send the following sketch to your board:
+
+Remember to fill in your **Auth Token, SSID & Password** in the appropriate lines.
+
+```
+/*************************************************************
+Download latest Blynk library here:
+https://github.com/blynkkk/blynk-library/releases/latest
+Blynk is a platform with iOS and Android apps to control
+Arduino, Raspberry Pi and the likes over the Internet.
+You can easily build graphic interfaces for all your
+projects by simply dragging and dropping widgets.
+Downloads, docs, tutorials: http://www.blynk.cc
+Sketch generator: http://examples.blynk.cc
+Blynk community: http://community.blynk.cc
+Follow us: http://www.fb.com/blynkapp
+http://twitter.com/blynk_app
+Blynk library is licensed under MIT license
+This example code is in public domain.
+*************************************************************
+This example runs directly on ESP8266 chip.
+Note: This requires ESP8266 support package:
+https://github.com/esp8266/Arduino
+Please be sure to select the right ESP8266 module
+in the Tools -> Board menu!
+Change WiFi ssid, pass, and Blynk auth token to run :)
+Feel free to apply it to any other example. It's simple!
+*************************************************************/
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
+
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth`[]` = "";
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid`[]` = "";
+char pass[] = "";
+
+// Select your pin with the button connected
+const int btnPin = D1;
+
+// Making a new variable for our WidgetLED on Virtual Pin 0
+WidgetLED led1(V0);
+
+// We need a timer in our sketch 
+BlynkTimer timer;
+
+// Making a boolean to store the state of our button (on or off)
+bool btnState = false;
+
+void buttonLEDWidget()
+{
+// This function is called using the timer we set up above
+
+// first we read the digital pin to see if the state has changed
+bool isPressed = (digitalRead(btnPin) == LOW);
+
+// if the current state of the button is different to last check
+if (isPressed != btnState) {
+if (isPressed) {
+led1.on();
+} else {
+led1.off();
+}
+btnState = isPressed; // set our button state to whichever it is now
+}
+}
+
+void setup()
+{
+// Debug console
+Serial.begin(9600);
+
+Blynk.begin(auth, ssid, pass);
+
+// This pinMode allows us to use the onboard resistor
+// but our logic is reversed: HIGH is off, LOW is on.
+pinMode(btnPin, INPUT_PULLUP);
+
+// Our timer is called twice per second.
+// Our buttonLEDWidget() function we wrote above 
+// is called once per timer interval 
+// Avoid setting timers faster than this
+// You may trigger a "Flood Error" and Blynk will disconnect you.
+timer.setInterval(500L, buttonLEDWidget); 
+}
+
+void loop()
+{
+Blynk.run();
+timer.run(); 
+}
+```
+
+Take care to read the comments in all of the new parts of the code. We have some basic logic for flipping the state of the button, a custom function called **buttonLEDWidget()** which is attached to a timer and a new type of data structure **WidgetLED** which we've attached to the variable **led1** set to **Virtual Pin 0 (V0)**
+
+Every half second, the sketch will check to see if the state of the button has changed. If it has, we're calling **led1.on()** - else we're turning the **led1.off()**
+
+Let's see it in action. In your Blynk project, delete the **Button** from the last section and add an **LED Widget** from the Displays section. You can resize it in the project space too, make it nice and big.
+
+Now tap the **LED Widget** and enter the **LED Widget Settings** page. We're going to change the **INPUT** to **V0**. Notice that you can only use Virtual Pins here? As mentioned above, the Virtual Pins act as a "middleman" between your board's code and the Widgets in your app. In most cases you'll need a Virtual Pin to make changes like this.
+
+{: .center}
+![](/Blynk8266/012blynkButtonLED2.jpg){:height="50%" width="50%"}
+
+Give it a try! Hit **Play** on your project and try holding the button while your board is supplied with power and connected to WiFi. 
+
+
+### Task
+
+Use the circuit you have connected to create different events based on how many button presses are made.
+
+* Use Four LED Widgets to indicate button presses.
+* When the button is pressed a fifth time, clear all of the LED Widgets and start again.
+* You can use this guide (Links to an external site.) to help, but don't copy/paste. Break down the code piece by piece using * the comments to help you. You will need to adjust your code to work with Blynk's timer.
+
+ 
+
+### Going Further
+We've only scratched the surface here, there are all sorts of Widgets to choose from. You'll see that when selecting a Widget there is a white information box `[ i ]` for each Widget which gives you all sorts of handy tips for coding when using that Widget.
+
+There's even more information in the documentation (Links to an external site.). If you're stuck, the docs are always the first place you should look (Links to an external site.)!
