@@ -1,5 +1,5 @@
 # Data handling Techniques for Arduino
-In this module we are going to learn some general principles with Arduino that apply when selecting sensors and working with the resulting data. We'll learn the basics of analogue vs digital, some handy (and by now familiar) functions and finally some techniques for handling analysing and handling data.
+In this module we are going to learn some general principles with Arduino that apply when selecting sensors and working with the resulting data. We'll learn the basics of analogue vs digital, some handy functions and finally some techniques for handling analysing and handling data.
 
  
 
@@ -13,7 +13,9 @@ Thus far we've seen the terms Analog and Digital being used in reference to sign
 
  
 
-Digital on the other hand is a very simple concept, it's right in the name. In digital systems we measure changes using numbers - in other words, digits. The best way to encode numbers in an electronic system is using binary which is base 2 notation. This means we can store numbers simply by using ones and zeroes. You've probably heard this before. Think of it like this, our decimal system is base 10 - every time we get to a multiple or divisor of 10, we shift the digits over by one. Binary does this whenever the digits arrive at a multiple of 2.
+Digital on the other hand is a very simple concept, it's right in the name. In digital systems we measure changes using numbers - in other words, digits. The best way to encode numbers in an electronic system is using binary which is base 2 notation. This means we can store numbers simply by using ones and zeroes. You've probably heard this before. 
+
+Think of it like this, our decimal system is base 10 - every time we get to a multiple or divisor of 10, we shift the digits over by one. Binary does this whenever the digits arrive at a multiple of 2.
 
 This is powerful in an electronic system as we can use HIGH and LOW voltage to refer to the two necessary binary states. 
 
@@ -26,11 +28,11 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 
 One single Bit can only store two numbers / states: on and off (or zero and one)
 
-0	1
+0|1
 Two Bits can store four numbers / states:
 
-00	01
-10	11
+00|01
+10|11
 Three Bits can store eight numbers / states: 
 
 000	001	010	011
