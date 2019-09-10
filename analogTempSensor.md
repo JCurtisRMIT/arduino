@@ -22,7 +22,7 @@ For convenience we are building the circuit on a breadboard. For a very detailed
 
 Enter the following code into the Arduino IDE and upload it to the Arduino.
 
-```markdown C++
+```C++
 //we declare our global variables up here before setup
 int tempSensor = A0;
 int LEDRpin = 11;
