@@ -9,3 +9,5 @@
 4. [NeoPixel Strips](/neoPixelStrip.md)
 
 5. [Blynk (8266 WiFi) or USB Arduino](/blynk8266.md)
+
+6. [Making a Voltage Divider](/voltageDivider.md)
