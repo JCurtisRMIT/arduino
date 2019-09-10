@@ -25,23 +25,27 @@ This is powerful in an electronic system as we can use HIGH and LOW voltage to r
 You've probably noticed that some of the pins on the Arduino that we have used have been marked Analog pins - marked A0 to A5. These pins allow us to access the Analog to Digital Converter (ADC) on board the Arduino. This ADC is 10bit resolution, but what does that mean? Bit depth refers to how many values can be stored in memory and governs the finite range of numbers the digital converter can measure.
 
  
-
+{: .center}
 One single Bit can only store two numbers / states: on and off (or zero and one)
 
+{: .center}
 . | .
 ---- | ---
 0 | 1
 
-
+{: .center}
 Two Bits can store four numbers / states:
 
+{: .center}
 . | .
 -- | --
 00 | 01
 10 | 11
 
+{: .center}
 Three Bits can store eight numbers / states: 
 
+{: .center}
 . | .
 ----- | ----- 
 000	| 001
@@ -49,8 +53,10 @@ Three Bits can store eight numbers / states:
 100	| 101	
 110	| 111
 
+{: .center}
 Four Bits can store sixteen numbers / states:
 
+{: .center}
 . | .
 ---- | ---- 
 0000	| 0001	
@@ -62,13 +68,14 @@ Four Bits can store sixteen numbers / states:
 1011	| 1101	
 1110	| 1111
 
+{: .center}
 ..and so on.
 
 {: .center}
 ![](/assets/basics/0024-bit_resolution_analog_comparison.png){:height="75%" width="75%"}
 
 
-
+{: .center}
 As you can see, every time we add another Bit we double our storage.
 
 At 10bit resolution we can store 1024 states, giving us a range of 0 - 1023 for our digital conversion. We can represent the continuous, smooth analog voltage changes as digital numbers within this range.
