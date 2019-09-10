@@ -1,20 +1,24 @@
 ## Blynk & Arduino
 
-[Blynk](https://blynk.io/) is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an ESP8266 wifi module.
+[Blynk](https://blynk.io/) is a free application that allows you to quickly make a connection between your Arduino and the world, but also allows you to rapidly prototype smartphone applications too. We've explored Blynk in a previous module with Particle. This time we're going to use Blynk with a regular Arduino and also using a nice and easy board containing an **ESP8266** wifi module.
+
+If you don't have an ESP8266 module, don't worry - you can use Blynk via USB with your regular Arduino. Directions are at the bottom of this page.
 
 ![Blynk Architecture](/Blynk8266/001blynkarchitecture.png)
 
 ### Getting Set up with Blynk
 
-Firstly we're going to need to download the Blynk app for either Android or iPhone, it's a free download.Once it's finished downloading, open up the app and create an account. Now, install the Blynk library using your Arduino IDE. We'll need it in a minute.
+Firstly we're going to need to download the Blynk app for either Android or iPhone, it's a free download. Once it's finished downloading, open up the app and create an account. Now, install the Blynk library using your Arduino IDE. We'll need it in a minute.
 
 ![Blynk Library](/Blynk8266/002blynkLibrary.png)
 
 Now there are a few ways to use Blynk. Blynk needs to connect to your Arduino (or other MCU) via the internet. 
 
-There are many supported hardware platforms that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet. (See below)
+There are [many supported hardware platforms](https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md) that you can use with Blynk (about 400!) however we're only going to cover two here. For a regular Arduino with no wifi module you can install some software that will allow your Arduino to use a USB connection to your computer to connect to the internet. (See below)
 
-As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the D1 Mini. There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the documentation yourself go ahead and grab any one you like.
+As a more portable alternative, there is a nice and easy to use series of wifi enabled Arduino compatible boards that all use a microchip called the ESP8266. For this module we'll be using this one, the [D1 Mini](https://www.jaycar.com.au/wifi-mini-esp8266-main-board/p/XC3802). 
+
+There are many other ESP8266 variants that can work with Blynk, so if you're comfortable reading the [documentation](https://docs.blynk.cc/) yourself go ahead and grab any one you like.
 
 ![d1 Mini](/Blynk8266/003d1Mini.png)
 
@@ -145,7 +149,7 @@ We're going to tap the **Output** section and change the Pin to **Digital Pin: D
 
 Now close the Button Settings menu by hitting OK. Go ahead and plug your D1 Mini into power, check the Serial Monitor again to see that it connects successfully to your WiFi. Once it has, you can hit Play now in your project and try tapping the button on the Blynk app.
 
-Voila! Notice how we didn't need to write any code in the Arduino IDE for pinMode() and digitalWrite() like usual? The Blynk library takes care of some of this stuff so we can prototype some functionality just using the app.
+Voila! Notice how we didn't need to write any code in the Arduino IDE for **pinMode()** and **digitalWrite()** like usual? The Blynk library takes care of some of this stuff so we can prototype some functionality just using the app.
 
  
 
@@ -282,7 +286,7 @@ Use the circuit you have connected to create different events based on how many 
 
 * Use Four LED Widgets to indicate button presses.
 * When the button is pressed a fifth time, clear all of the LED Widgets and start again.
-* You can use this guide (Links to an external site.) to help, but don't copy/paste. Break down the code piece by piece using * the comments to help you. You will need to adjust your code to work with Blynk's timer.
+* You can use [this guide]() to help, but don't copy/paste. Break down the code piece by piece using * the comments to help you. You will need to adjust your code to work with Blynk's timer.
 
  
 
