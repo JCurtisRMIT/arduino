@@ -28,21 +28,21 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 
 One single Bit can only store two numbers / states: on and off (or zero and one)
 
-one | bit
+. | .
 ---- | ---
 0 | 1
 
 
 Two Bits can store four numbers / states:
 
-two | bits
+. | .
 -- | --
 00 | 01
 10 | 11
 
 Three Bits can store eight numbers / states: 
 
-three | bits
+. | .
 ----- | ----- 
 000	| 001
 010	| 011
@@ -51,7 +51,7 @@ three | bits
 
 Four Bits can store sixteen numbers / states:
 
-four | bits
+. | .
 ---- | ---- 
 0000	| 0001	
 0010	| 0100
