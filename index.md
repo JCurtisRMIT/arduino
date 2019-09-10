@@ -96,3 +96,23 @@ void loop()
 Blynk.run();
 }
 ```
+
+You'll see a couple of lines in the code that you'll need to change to get up and running. Firstly is your "Auth Token". This is the token that is generated in each project you make on Blynk.
+
+Let's make a new project on our Blynk app. Then press the 'nut' icon to see **Project Settings**.
+
+Under "**Devices**" add a new device and select **WeMos D1 mini** with Connection Type **WiFi**. You'll see your Auth Token below. You can use the top field to name your device whatever you'd like.
+
+If you don't feel like manually typing that really long string of characters and numbers you can have Blynk email you the Auth token using the Email button. Copy the token into line 34 of the Arduino code between the quotes.
+
+```char auth[] = "YourAuthToken";```
+
+Now copy your WiFi SSID and Password into the following lines of the Arduino sketch. Your WiFi SSID is the name of your WiFi when you connect to it. Make sure to keep the quotes.
+
+```
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
+```
+
+Now save your sketch and run it. Open up the Serial Monitor in the Arduino IDE at 9600 baud and watch as your new D1 mini connects to the internet using your WiFi, it may take a second or two.
+
