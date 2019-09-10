@@ -22,20 +22,24 @@ For convenience we are building the circuit on a breadboard. For a very detailed
 
 Enter the following code into the Arduino IDE and upload it to the Arduino.
 
-```markdown 
+```markdown c++
+//we declare our global variables up here before setup
 int tempSensor = A0;
 int LEDRpin = 11;
 int LEDGpin = 10;
 int LEDBpin = 9;
 
-void setup() {
+void setup() 
+{
+ // we include our setup code here to run once
  pinMode(LEDRpin, OUTPUT);
  pinMode(LEDGpin, OUTPUT);
  pinMode(LEDBpin, OUTPUT);
  Serial.begin(9600);
 }
 
-void loop() {
+void loop() 
+{
  //getting the voltage reading from the temperature sensor
  int reading = analogRead(tempSensor);
 
