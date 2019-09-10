@@ -26,14 +26,14 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 
  
 {: .center}
-**One single Bit can only store two numbers / states: on and off (or zero and one)
+**One single Bit can only store two numbers / states: on and off (or zero and one)**
 
 . | .
 ---- | ---
 0 | 1
 
 {: .center}
-**Two Bits can store four numbers / states:
+**Two Bits can store four numbers / states:**
 
 . | .
 -- | --
@@ -41,7 +41,7 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 10 | 11
 
 {: .center}
-**Three Bits can store eight numbers / states: 
+**Three Bits can store eight numbers / states:** 
 
 . | .
 ----- | ----- 
@@ -51,7 +51,7 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 110	| 111
 
 {: .center}
-**Four Bits can store sixteen numbers / states:
+**Four Bits can store sixteen numbers / states:**
 
 . | .
 ---- | ---- 
@@ -65,7 +65,7 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 1110	| 1111
 
 {: .center}
-**..and so on.
+**..and so on.**
 
 {: .center}
 ![](/assets/basics/0024-bit_resolution_analog_comparison.png){:height="75%" width="75%"}
