@@ -65,7 +65,7 @@ Four Bits can store sixteen numbers / states:
 ..and so on.
 
 {: .center}
-![](/assets/basics/0024-bit_resolution_analog_comparison.png){:height="50%" width="50%"}
+![](/assets/basics/0024-bit_resolution_analog_comparison.png){:height="75%" width="75%"}
 
 
 
