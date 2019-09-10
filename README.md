@@ -1,2 +1,2 @@
-# knowledge Repository 
-tips and tricks for Circuits, Arduino, MaxMSP, Processing etc
+# Arduino Repository 
+tips and tricks for Circuits, Arduino etc
