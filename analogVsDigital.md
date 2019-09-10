@@ -27,11 +27,12 @@ You've probably noticed that some of the pins on the Arduino that we have used h
  
 
 One single Bit can only store two numbers / states: on and off (or zero and one)
-
+_ | _
 - | -
 0 | 1
 
 Two Bits can store four numbers / states:
+__ | __
 -- | --
 00 | 01
 10 | 11
