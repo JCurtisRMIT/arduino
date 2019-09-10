@@ -43,17 +43,16 @@ Four Bits can store sixteen numbers / states:
 1011	1101	1110	1111
 ..and so on.
 
-4bit
+{: .center}
+![](/assets/basics/0024-bit_resolution_analog_comparison.png){: .width="100%" .height="100%"}
 
- 
 
- 
 
 As you can see, every time we add another Bit we double our storage.
 
 At 10bit resolution we can store 1024 states, giving us a range of 0 - 1023 for our digital conversion. We can represent the continuous, smooth analog voltage changes as digital numbers within this range.
 
-We use the analogRead() function to read values from the A0 - A5 pins on the Arduino like so:
+We use the **analogRead()** function to read values from the A0 - A5 pins on the Arduino like so:
 
 
 ```c++
@@ -66,16 +65,18 @@ void loop()
 }
 ``` 
 
-Pulse Width Modulation (PWM)
-Pulse Width Modulation is a bit of a trick the Arduino can do to simulate a continuous analog signal. By varying the width of pulses over time we can produce a signal of increasing or decreasing "frequency" instead of just on and off. In fact, we've done this already to increase the brightness of an LED using the analogWrite() function.
+### Pulse Width Modulation (PWM)
+
+Pulse Width Modulation is a bit of a trick the Arduino can do to simulate a continuous analog signal. By varying the width of pulses over time we can produce a signal of increasing or decreasing "frequency" instead of just on and off. In fact, we've done this already to increase the brightness of an LED using the **analogWrite()** function.
 
 The analogWrite() function allows us to use a number range of 0-255 to set how fast we'd like our signal. This actually represents how much of each duty cycle our signal is switched on.
 
- 
+{: .center}
+![](/assets/basics/003pwm.gif){: .width="100%" .height="100%"}
 
-## PWM
+We use the analogWrite() function to write values to a digital pin with PWM~ capability (usually: digital pins 3, 5, 6, 9, 10, and 11). 
 
-We use the analogWrite() function to write values to a digital pin with PWM~ capability (usually: digital pins 3, 5, 6, 9, 10, and 11). The PWM pins are often marked with either PWM or with a tilde: ~ to help you find them.
+The PWM pins are often marked with either PWM or with a tilde: ~ to help you find them.
 
  
 ```c++
