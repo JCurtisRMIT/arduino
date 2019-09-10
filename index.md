@@ -1,6 +1,6 @@
 # Arduino Tutorials
 
-1. Introduction to Arduino
+1. [Introduction to Arduino](/gettingStarted.md)
 
 2. [Analog vs Digital + Data Handling Techniques](/analogVsDigital.md)
 
