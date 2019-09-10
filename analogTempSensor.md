@@ -22,7 +22,7 @@ For convenience we are building the circuit on a breadboard. For a very detailed
 
 Enter the following code into the Arduino IDE and upload it to the Arduino.
 
-```markdown arduino
+```markdown 
 int tempSensor = A0;
 int LEDRpin = 11;
 int LEDGpin = 10;
