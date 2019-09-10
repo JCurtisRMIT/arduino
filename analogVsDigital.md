@@ -8,7 +8,8 @@ Thus far we've seen the terms Analog and Digital being used in reference to sign
 
  
 
-voltage
+{: .center}
+![](/assets/basics/001Voltage.png){: .width="50%" .height="50%"}
 
  
 
@@ -18,7 +19,7 @@ This is powerful in an electronic system as we can use HIGH and LOW voltage to r
 
  
 
-Analog to Digital Conversion
+### Analog to Digital Conversion
 You've probably noticed that some of the pins on the Arduino that we have used have been marked Analog pins - marked A0 to A5. These pins allow us to access the Analog to Digital Converter (ADC) on board the Arduino. This ADC is 10bit resolution, but what does that mean? Bit depth refers to how many values can be stored in memory and governs the finite range of numbers the digital converter can measure.
 
  
@@ -72,7 +73,7 @@ The analogWrite() function allows us to use a number range of 0-255 to set how f
 
  
 
-# PWM
+## PWM
 
 We use the analogWrite() function to write values to a digital pin with PWM~ capability (usually: digital pins 3, 5, 6, 9, 10, and 11). The PWM pins are often marked with either PWM or with a tilde: ~ to help you find them.
 
@@ -93,21 +94,21 @@ void loop()
 }
 ```
 
-## Notes about PWM pins: 
+### Notes about PWM pins: 
 The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the millis() and delay() functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
 
  
 
  
 
-# (Really) Useful Arduino functions
+## (Really) Useful Arduino functions
 You might have thought that the examples above don't really allow us to do much with our sensor and output data, they simply control reading and writing it. The following Arduino functions are extremely useful in handling data when we'd like to perform actions on it in between.
 
 These are likely to be the functions you will use the most in your Arduino projects. Let's cover each in some detail.
 
  
 
-## map()
+### map()
 map() allows us to take one range of data and map it to another (without having to pull out a calculator). For instance, you might have noticed our input range (0-1023) from analogRead() is much larger than our output range (0-255). Let's use map() to help us here.
 
 ```c++
@@ -130,7 +131,7 @@ void loop()
 }
 ``` 
 
-## constrain()
+### constrain()
 Often we need to ensure that a number never leaves the bounds of a desired range. In some cases sending a negative number or a very large number can break your code - so it's good practice to ensure that we're sticking to ranges we desire. constrain() allows us to limit our variable to stick to a range we specify. 
 
 ```c++
@@ -154,7 +155,7 @@ void loop()
 }
 ``` 
 
-## if() 
+### if() 
 Conditional operations are incredibly useful when we need something to occur under a certain condition. We then provide an else condition for everything else.
 
 For instance, let's say we only want to map our analog sensor value to the PWM pin when our analog sensor reading is above a certain threshold - in this case: 512. 
@@ -186,7 +187,7 @@ void loop()
 }
 ``` 
 
-## for loops
+### for loops
 We can actually create our own loops of functionality inside our main loop to perform repeated routines incrementally. This is very useful for increasing or decreasing numbers procedurally too. Let's say we'd like to slowly fade up an LED using PWM to control the brightness. We can use some for loops to control the brightness as it increases and decreases.
 
 _Note: if you build the circuit for this code place a 220ohm resistor in series with the cathode leg (Links to an external site.) and ground. This will protect the LED from burning out. The anode leg (Links to an external site.) of the LED is connected to digital pin 9._
@@ -218,7 +219,7 @@ void loop() {
 
  
 
-# Smoothing Noisy Data
+## Smoothing Noisy Data
 Sometimes you'll notice that your sensor data is a bit jittery or noisy. A really handy function to have is a smoothing function. Arduino doesn't actually have one in its stock library, however you can build your own simple smoothing function by collecting some data over time, then averaging it. Simply collect a specified number of sensor readings using a for loop by adding them together, then divide the total by the number of readings. ie: the mean average.
 
 The following example calls a custom function called smooth() that we define ourselves before the main loop(). Try this with a jittery sensor and experiment with different amounts of readings; a larger amount of readings will produce a better average - but will be slower in its response.
