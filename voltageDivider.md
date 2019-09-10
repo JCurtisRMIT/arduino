@@ -4,13 +4,13 @@ Sometimes we want to drop down voltage to work at a different level. For instanc
 
 **REMEMBER:
 
-Never use a resistor voltage divider to drop voltage down from higher voltages above 5v to supply your Arduino (or any other load). Your resistors will most likely melt, pop or sizzle which is absolutely to be avoided in the context of wearable technology. 
+**Never use a resistor voltage divider to drop voltage down from higher voltages above 5v to supply your Arduino (or any other load). Your resistors will most likely melt, pop or sizzle which is absolutely to be avoided in the context of wearable technology. 
 
-You can also never step up a voltage using this circuit, only downward (we're dividing, not multiplying!)**
+**You can also never step up a voltage using this circuit, only downward (we're dividing, not multiplying!)**
 
  
-
-voltageDivider
+{: .center}
+![](/assets/basics/VoltageDivider.png)
 
  
 
@@ -18,7 +18,7 @@ Okay, let's build our voltage divider. The method to calculate the resistor valu
 
  
 
-Voltage Output = (Voltage Source * Resistor2) / (Resistor1 + Resistor2)
+**Voltage Output = (Voltage Source * Resistor2) / (Resistor1 + Resistor2)**
  
 
 So, to work out your resistor values first decide your voltage source. In our case, this is 5v. Our desired output is 3.3v.
@@ -83,4 +83,4 @@ In case you're worrying about those extra 33 milliVolts (0.033v) - that's usuall
 
  
 
-There you go! Now you actually know what's happening when next time you use a voltage divider calculator (Links to an external site.) which is way easier. 😋
+There you go! Now you actually know what's happening when next time you use a [voltage divider calculator](http://www.ti.com/download/kbase/volt/volt_div3.htm) which is pretty convenient! 😋
