@@ -26,7 +26,8 @@ You've probably noticed that some of the pins on the Arduino that we have used h
 
  
 {: .center}
-**One single Bit can only store two numbers / states: on and off (or zero and one)**
+**One single Bit can only store two numbers / states: 
+on and off (or zero and one)**
 . | .
 ---- | ---
 0 | 1
