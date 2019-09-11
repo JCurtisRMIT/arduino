@@ -365,7 +365,7 @@ Remember to change this line of code to your Auth Token as described earlier in 
 
 Before anything will work, you'll need to run some extra stuff. Depending on your platform (Windows or MacOS) you'll need to do these differently. Follow the steps in the guide here and take care to set up your system correctly.
 
-http://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield
+[http://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield](http://docs.blynk.cc/#hardware-set-ups-arduino-over-usb-no-shield) 
 
  
 
