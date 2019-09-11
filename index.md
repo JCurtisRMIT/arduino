@@ -14,4 +14,4 @@
 
 * [Conductive Paint Tattoo Synthesizer](/APC.md)
 
-* [Capacitive Touch Poster](/capSense.md)
+
