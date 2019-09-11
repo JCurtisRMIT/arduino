@@ -47,7 +47,7 @@ You can now select "LOLIN (WEMOS) D1 R2 & mini" from the boards selection in Too
 
 If you've followed correctly we can now start using Blynk! With the correct Board and Port selected in the Arduino IDE, make a new sketch and copy in the following code.
 
-```arduino
+```c++
 /*************************************************************
 Download latest Blynk library here:
 https://github.com/blynkkk/blynk-library/releases/latest
@@ -169,7 +169,7 @@ Now send the following sketch to your board:
 
 Remember to fill in your **Auth Token, SSID & Password** in the appropriate lines.
 
-```
+```c++
 /*************************************************************
 Download latest Blynk library here:
 https://github.com/blynkkk/blynk-library/releases/latest
@@ -303,7 +303,7 @@ Even if you don't have a nice little WiFi module like we discussed above you can
 
 You can use the following sketch to make a connection:
 
-```
+```c++
 /*************************************************************
 Download latest Blynk library here:
 https://github.com/blynkkk/blynk-library/releases/latest
