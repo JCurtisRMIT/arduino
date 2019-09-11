@@ -6,11 +6,30 @@ The 555 timer integrated circuit is simple and effective for creating oscillatio
 
 Typically these tone generators are controlled by two potentiometers or photoresistors. This time we'll experiment with conductive paint.
 
-First, create a long trace of conductive paint on some paper (the longer and thinner the better). Experiment in branching traces off and use different line thicknesses. 
-
-To ensure a long trace you can curl the line back around to create patterns (so long as it doesn't connect with itself).
 
 {: .center}
 ![](/assets/basics/circuittattoo.jpg){: width="50%" height="50%"}
 
 
+
+First, let's prototype some designs on paper.
+
+Create a long trace of conductive paint on some paper (the longer and thinner the better). Experiment in branching traces off and use different line thicknesses. 
+
+**Do not complete the circuit back to the start, aim to make the current travel as far as possible.**
+
+To ensure a long trace you can curl the line back around to create patterns (so long as it doesn't connect with itself).
+
+{: .center}
+![](/assets/basics/multimeter.jpeg){: width="50%" height="50%"}
+
+Let's measure the resistance from the point of origin to various points along the trace. Put the multimeter into ```Ω``` (ohm / resistance) mode and use the probes to measure the resistance.
+
+You'll see the resistance increases the further along the trace you go. This will be great when we connect our synthesiser circuit to it.
+
+
+
+Let's make the following circuit. Take care not to apply power until you've completed the circuit and checked it.
+
+{: .center}
+![](/assets/basics/APC556.png){: width="75%" height="75%"}
