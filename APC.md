@@ -8,16 +8,6 @@ The 555 timer integrated circuit is simple and effective for creating oscillatio
 
 Typically these tone generators are controlled by two potentiometers or photoresistors. This time we'll experiment with conductive paint.
 
-Things we'll need:
-
-* NE556 IC
-* 1k resistor
-* 10k resistor
-* 4.7k resistor
-* 2x 1uf capacitors
-* 10uf capacitor
-* 9v battery
-
 
 {: .center}
 ![](/assets/basics/circuittattoo.jpg){: width="50%" height="50%"}
@@ -39,6 +29,19 @@ Let's measure the resistance from the point of origin to various points along th
 
 You'll see the resistance increases the further along the trace you go. This will be great when we connect our synthesiser circuit to it.
 
+```
+Things we'll need:
+
+* NE556 IC
+* 1k resistor
+* 10k resistor
+* 4.7k resistor
+* 2x 1uf capacitors
+* 10uf capacitor
+* 9v battery + snap connector
+* 3.5mm headphone socket
+* alligator clips
+```
 
 
 Let's make the following circuit. Take care not to apply power until you've completed the circuit and checked it.
