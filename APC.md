@@ -11,6 +11,6 @@ First, create a long trace of conductive paint on some paper (the longer and thi
 To ensure a long trace you can curl the line back around to create patterns (so long as it doesn't connect with itself).
 
 {: .center}
-![](/assets/basics/circuittattoo){: width="50%" height="50%"}
+![](/assets/basics/circuittattoo.jpg){: width="50%" height="50%"}
 
 
