@@ -49,4 +49,13 @@ Let's make the following circuit. Take care not to apply power until you've comp
 {: .center}
 ![](/assets/basics/APC556.png)
 
-We'll need two separate conductive paint designs to attach to our four probes. The probes listed as "base" should be attached at ends of the trace. Use the other probes to tap and move across your designs and listen to the results!
+We'll need two separate conductive paint designs to attach to our four probes. The probes listed as "base" should be attached at ends of the trace. 
+
+Use the other probes to tap and move across your designs and listen to the results!
+
+
+## Making a tattoo
+
+Though the voltage and current we're using is safe to apply to the skin, our skin itself is conductive. We'll need to lay down a non conductive substance like sticky tape or glad wrap as base over our skin before we draw our final tattoo designs with the conductive paint. It'll also be far easier to clean up later!
+
+Use a very fine brush to draw your tattoo design onto the tape while placed on the skin. Remember to make long, thin traces that do not lead back to the point of origin to get the greatest frequency range with your synthesizer!
