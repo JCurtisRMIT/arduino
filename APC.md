@@ -34,4 +34,6 @@ You'll see the resistance increases the further along the trace you go. This wil
 Let's make the following circuit. Take care not to apply power until you've completed the circuit and checked it.
 
 {: .center}
-![](/assets/basics/APC556.png){: width="75%" height="75%"}
+![](/assets/basics/APC556.png)
+
+We'll need two separate conductive paint designs to attach to our four probes. The probes listed as "base" should be attached at ends of the trace. Use the other probes to tap and move across your designs and listen to the results!
