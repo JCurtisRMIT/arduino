@@ -8,6 +8,16 @@ The 555 timer integrated circuit is simple and effective for creating oscillatio
 
 Typically these tone generators are controlled by two potentiometers or photoresistors. This time we'll experiment with conductive paint.
 
+Things we'll need:
+
+* NE556 IC
+* 1k resistor
+* 10k resistor
+* 4.7k resistor
+* 2x 1uf capacitors
+* 10uf capacitor
+* 9v battery
+
 
 {: .center}
 ![](/assets/basics/circuittattoo.jpg){: width="50%" height="50%"}
