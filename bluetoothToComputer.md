@@ -8,7 +8,7 @@ The two most common Bluetooth modules for Arduino are the HC-05 and the HC-06. T
 
  
 
-hc05vshc06
+![](/assets/basics/HC-05-HC-06.jpg)
 
  
 
@@ -61,7 +61,7 @@ If you connect things incorrectly, you can damage your modules. Take care to che
 
  
 
-hc05Max001
+![](/assets/basics/HC05002bb.png)
 
  
 
@@ -73,7 +73,7 @@ Download the following patch here: HC05 Bluetooth Max.maxpat
 
  
 
-Max001
+![](/assets/basics/HC05003.png)
 
  
 
@@ -81,7 +81,7 @@ Before clicking on the toggle, first use the Print message to print the availabl
 
  
 
-Max002
+![](/assets/basics/HC05004.png)
 
  
 
@@ -129,7 +129,7 @@ As the Serial communications are wireless in this circuit, we can disconnect it 
 
  
 
-Max004
+![](/assets/basics/HC05002b.png)
 
  
 
