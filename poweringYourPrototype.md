@@ -20,10 +20,9 @@ The datasheet for your components will tell you both the voltage and how much cu
 * The absolute maximum for any single IO pin is 40 mA (this maximum will certainly damage the pin)
 * The total current from all the IO pins together is 200 mA max
 * The 5V output pin is good for ~400 mA on USB, ~900 mA when using an external power adapter
-* The 900 mA is for an adapter that provides ~7V. As the adapter voltage increases, the amount of heat the regulator has to deal with also increases, so the maximum current will drop as the voltage increases. (This is called thermal limiting).
+  * The 900 mA is for an adapter that provides ~7V. As the adapter voltage increases, the amount of heat the regulator has to deal with also increases, so the maximum current will drop as the voltage increases. (This is called thermal limiting).
 * The 3.3V output is capable of supplying 150 mA.
-
-Note - Any power drawn from the 3.3V rail has to go through the 5V rail. Therefore, if you have a 100 mA device on the 3.3V output, you need to also count it against the 5V total current.
+  * Note - Any power drawn from the 3.3V rail has to go through the 5V rail. Therefore, if you have a 100 mA device on the 3.3V output, you need to also count it against the 5V total current.
 
 Source: https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins 
 
@@ -69,8 +68,11 @@ There are other options out there, but I suggest going for the easiest and the b
 
  
 
-Charging (and discharging) a LiPo Safely
-There are many options available to charge a LiPo, however not all of them are safe! You will need to take care when charging a LiPo battery. Or else it may explode and catch fire. Please only use the charging solutions offered above to charge your LiPo.
+## Charging (and discharging) a LiPo Safely
+
+There are many options available to charge a LiPo, however not all of them are safe! You will need to take care when charging a LiPo battery. Or else it may explode and catch fire. 
+
+Please only use the charging solutions offered above to charge your LiPo.
 
 
 {: .center}
