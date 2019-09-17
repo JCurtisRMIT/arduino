@@ -31,40 +31,42 @@ Source: https://electronics.stackexchange.com/questions/67092/how-much-current-c
 ## Battery Life (mAh)
 If you know how much current your circuit will draw, you can use the milliAmp Hour (mAh) rating of a battery to determine how long your circuit will run for before needing a new battery (or a recharge). This is really useful when selecting a battery for your project. 
 
-lipo 1000mah
+{: .center}
+![lipo 1000mah](/assets/basics/37v-1000mah-5c-lipo-battery.jpg)
 
 For example, this rechargeable Lithium-Ion Polymer (LiPo) battery uses 3.7v and is rated at 1000mAh. This could run a circuit drawing 100mA of current for 10 hours before needing a recharge.
 
  
 
-Supplying the Arduino
+### Supplying the Arduino
 Let's consider using a rechargeable LiPo battery for our wearable. The advantage of Lithium-Ion Polymer batteries is that they are relatively small, sit flat in a rectangular form factor (mostly) and are rechargeable. One important thing to note is that they are also somewhat delicate, so handle them with care so as not to puncture, scratch or rupture the casing. Also, never, ever get them wet or anywhere near flame. (Links to an external site.)
 
-protected
-
-Two LiPo batteries containing a protection circuit (always use these).
+{: .center}
+![protected lipo](/assets/basics/components_protcells.jpg)
+{: .center}
+_Two LiPo batteries containing a protection circuit (always use these)._
 
  
 
 When selecting a LiPo, ensure there is a protection circuit which is usually taped onto the top of the battery (indicated by the yellow tape above). There are other types of LiPos which do not use a protection circuit, these are for RC (radio controlled) circuits like drones/UAV/quadcopters etc. and are designed to discharge a lot of power at once. Do not use these "raw" style LiPos in your wearable prototype. Always use a LiPo with a protection circuit.
 
-Protecting your LiPo from Scratches
-As mentioned above, scratching or rupturing the casing of the LiPo could lead to catastrophic consequences. Consider protecting your LiPo with a 3D printed case or sleeve, browse some options here on Thingiverse (Links to an external site.) or even better, design your own in CAD for use with your wearable prototype.
+### Protecting your LiPo from Scratches
+As mentioned above, scratching or rupturing the casing of the LiPo could lead to catastrophic consequences. Consider protecting your LiPo with a 3D printed case or sleeve, browse some options on Thingiverse or even better, design your own in CAD for use with your wearable prototype.
 
-Boosting power for the Arduino
+### Boosting power for the Arduino
 Almost every LiPo battery is rated at 3.7v - so if we want to use one to power our Arduino project at 5v, we'll need to boost the power. Thankfully, instead of diving into a potentially unsafe world of making our own DC step up voltage circuit, we can use a nicely prepared board by Adafruit which will do the job for us. 
 
-Adafruit's Power Boost 500C (Links to an external site.) is an excellent choice for wearable prototype using a 3.7v LiPo battery that needs to supply 5v to an Arduino. 
+[Adafruit's Power Boost 500C](https://www.adafruit.com/product/1944) is an excellent choice for wearable prototype using a 3.7v LiPo battery that needs to supply 5v to an Arduino. 
 
-Powerboost500c
+![Powerboost500c](/assets/basics/adafruit_products_1944demo_ORIG_269.jpg)
 
 These boards allow you to keep your LiPo plugged in to your circuit and use a microUSB cable to recharge it. You could also even supply power to another device via the USB socket at the bottom as shown above if you solder on the (optional) standard USB socket.
 
 The other thing that is great about this board is it will tell you that your battery is low (or finished charging) using an onboard LED.
 
-I highly suggest purchasing one of these for your project and taking care to read the entire guide (Links to an external site.) for the Powerboost 500C. You can purchase a battery from Adafruit at the same time.
+I highly suggest purchasing one of these for your project and taking care to [read the entire guide](https://learn.adafruit.com/adafruit-powerboost-500-plus-charger/) for the Powerboost 500C. You can purchase a battery from Adafruit at the same time.
 
-There are other options out there, but I suggest going for the easiest and the best here. Sparkfun sell a similar board (Links to an external site.) also. I do not suggest anyone attempt to use a different rechargeable Powerbooster circuit for any LiPo wearable prototype.
+There are other options out there, but I suggest going for the easiest and the best here. [Sparkfun sell a similar board](https://www.sparkfun.com/products/14411) also. I do not suggest anyone attempt to use a different rechargeable Powerbooster circuit for any LiPo wearable prototype.
 
  
 
