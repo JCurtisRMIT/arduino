@@ -1,10 +1,10 @@
 # Sparkfun MMA8452 Accelerometer Breakout
 
-Let's connect up the following circuit using a **Sparkfun MMA8452 Breakout** (Links to an external site.) board module which makes connecting to the onboard  MMA8452Q accelerometer integrated circuit (Links to an external site.) much easier.
+Let's connect up the following circuit using a [**Sparkfun MMA8452 Breakout**](https://www.sparkfun.com/products/12756) board module which makes connecting to the onboard  [MMA8452Q accelerometer integrated circuit](https://www.nxp.com/docs/en/data-sheet/MMA8452Q.pdf) much easier.
 
  
 
-Note: Please take care to connect exactly as shown before powering up your Arduino from USB power. In this circuit we are using 3.3v power, not 5v as usual. If you connect to 5v instead you will damage the module.
+_**Note: Please take care to connect exactly as shown before powering up your Arduino from USB power. In this circuit we are using 3.3v power, not 5v as usual. If you connect to 5v instead you will damage the module.**_
 
 Ensure you are connecting power to the 3.3v pin on your Arduino.
 
@@ -12,7 +12,7 @@ Also ensure that your resistors are not touching (shorting the SDA and SCL lines
 
  
 
-MMA8452
+![](/assets/basics/MMA8452_bb.png)
 
  
 
@@ -87,14 +87,16 @@ There are a few methods to capture data from your Arduino into a file. If you ha
 
  
 
-datalogger
+![](/assets/basics/Datalogger.png)
 
  
 
-I've created a MaxMSP patch that takes the values from the Serial port and logs them in a text file. MaxMSP allows us to make nice, user friendly interfaces with visual feedback. Try downloading the patch here: Serial to CSV.maxpat
+I've created a MaxMSP patch that takes the values from the Serial port and logs them in a text file. MaxMSP allows us to make nice, user friendly interfaces with visual feedback. Try downloading the patch here: [Serial to CSV.maxpat](/assets/files/SerialtoCSV.maxpat)
 
-MaxMSP is a node based graphical programming environment that is excellent for working with sound, multimedia and interactivity. You can download a free trial from cycling74.com and follow along with the three modules provided. Cycling74 offer a subscription model also for about $15 per month if you'd like to continue using it beyond the trial on a short term basis.
+MaxMSP is a node based graphical programming environment that is excellent for working with sound, multimedia and interactivity. You can download a free trial from http://cycling74.com and follow along with the three modules provided. 
+
+Cycling74 offer a subscription model also for about $15 per month if you'd like to continue using it beyond the trial on a short term basis.
 
 MaxMSP is a rapid prototyping platform that can really extend your Arduino projects into new territory with some basic understanding of how to communicate over the Serial port. The following three modules will provide the fundamentals in how to send information to and from your Arduino using MaxMSP.
 
-Note: Ensure the Serial monitor is closed in your Arduino IDE before attempting connection in MaxMSP. The Serial port can only be connected to via one piece of software at a time. This includes uploading sketches to your board, as this occurs using the Serial connection.
+_Note: Ensure the Serial monitor is closed in your Arduino IDE before attempting connection in MaxMSP. The Serial port can only be connected to via one piece of software at a time. This includes uploading sketches to your board, as this occurs using the Serial connection._
