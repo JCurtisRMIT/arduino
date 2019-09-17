@@ -1,4 +1,6 @@
-Let's connect up the following circuit using a Sparkfun MMA8452 Breakout (Links to an external site.) board module which makes connecting to the onboard  MMA8452Q accelerometer integrated circuit (Links to an external site.) much easier.
+# Sparkfun MMA8452 Accelerometer Breakout
+
+Let's connect up the following circuit using a **Sparkfun MMA8452 Breakout** (Links to an external site.) board module which makes connecting to the onboard  MMA8452Q accelerometer integrated circuit (Links to an external site.) much easier.
 
  
 
