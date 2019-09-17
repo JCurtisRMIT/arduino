@@ -1,4 +1,4 @@
-### Digital Temperature Sensor with RGB LED
+# Digital Temperature Sensor with RGB LED
 
 The following circuit and code presents a temperature indicator using the Arduino, digital temperature sensor (DS18B20), and an RGB LED.
 
