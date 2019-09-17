@@ -28,7 +28,7 @@ The datasheet for your components will tell you both the voltage and how much cu
   
   * Note - Any power drawn from the 3.3V rail has to go through the 5V rail. Therefore, if you have a 100 mA device on the 3.3V output, you need to also count it against the 5V total current.
 
-Source: https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins 
+Source: [https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins](http://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins) 
 
  
 
