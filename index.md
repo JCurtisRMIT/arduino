@@ -16,6 +16,10 @@
 
 * [Blynk (8266 WiFi) or USB Arduino](/blynk8266.md)
 
+* [Arduino Bluetooth to Computer](/bluetoothToComputer.md)
+
+* [Arduino Bluetooth to Arduino Bluetooth](/bluetoothToBluetooth.md)
+
 * [Powering Your Prototype](/poweringYourPrototype.md)
 
 * [Making a Voltage Divider](/voltageDivider.md)
