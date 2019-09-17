@@ -10,6 +10,8 @@
 
 * [NeoPixel Strips](/neoPixelStrip.md)
 
+* [Proximity Sensor](/proximitySensor.md)
+
 * [Blynk (8266 WiFi) or USB Arduino](/blynk8266.md)
 
 * [Making a Voltage Divider](/voltageDivider.md)
