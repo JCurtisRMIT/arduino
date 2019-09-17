@@ -4,8 +4,9 @@ Let's consider how we are going to power our wearable prototype. We're going to 
 
 Firstly, we're going to need to determine two things.
 
-The voltage requirement : measured in Volts) of your components
-and the current draw : measured in Amperes (A) or MilliAmperes (mA) 
+* The voltage requirement : measured in Volts) of your components
+* The current draw : measured in Amperes (A) or MilliAmperes (mA) 
+
 Typically, most Arduino sensor modules work either at 5 volts (5V) or 3.3v. The Arduino can safely supply 5v or 3.3v out of the pins marked as such. However, this only describes the differential between the positive (+) and ground (-) terminals. The Voltage is what allows current to flow through the circuit.
 
 The current is the rate of flow through an electric charge. You can think of it as the amount of water flowing through a hose. When you think about it this way, the term current makes sense - we use the same word to describe the flow of water influenced by gravity as it moves downhill to reduce its potential energy in a river. 
@@ -14,14 +15,17 @@ The datasheet for your components will tell you both the voltage and how much cu
 
  
 
-Arduino Current Draw Absolute Limitations
-The absolute maximum for any single IO pin is 40 mA (this maximum will certainly damage the pin)
-The total current from all the IO pins together is 200 mA max
-The 5V output pin is good for ~400 mA on USB, ~900 mA when using an external power adapter
-The 900 mA is for an adapter that provides ~7V. As the adapter voltage increases, the amount of heat the regulator has to deal with also increases, so the maximum current will drop as the voltage increases. (This is called thermal limiting).
-The 3.3V output is capable of supplying 150 mA.
+### Arduino Current Draw Absolute Limitations
+
+* The absolute maximum for any single IO pin is 40 mA (this maximum will certainly damage the pin)
+* The total current from all the IO pins together is 200 mA max
+* The 5V output pin is good for ~400 mA on USB, ~900 mA when using an external power adapter
+* The 900 mA is for an adapter that provides ~7V. As the adapter voltage increases, the amount of heat the regulator has to deal with also increases, so the maximum current will drop as the voltage increases. (This is called thermal limiting).
+* The 3.3V output is capable of supplying 150 mA.
+
 Note - Any power drawn from the 3.3V rail has to go through the 5V rail. Therefore, if you have a 100 mA device on the 3.3V output, you need to also count it against the 5V total current.
-Source: https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins (Links to an external site.)
+
+Source: https://electronics.stackexchange.com/questions/67092/how-much-current-can-i-draw-from-the-arduinos-pins 
 
  
 
@@ -70,6 +74,6 @@ There are many options available to charge a LiPo, however not all of them are s
 
 
 
- 
+ [![How Dangerous are LiPo Batteries?](https://img.youtube.com/vi/osfgkFyq7lA/0.jpg)](https://www.youtube.com/watch?v=osfgkFyq7lA)
 
  
