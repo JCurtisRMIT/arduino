@@ -1,7 +1,6 @@
 Digital Temperature Sensor with RGB LED
-The following circuit and code presents a temperature indicator using the Arduino, digital temperature sensor (DS18B20), and an RGB LED.
 
- 
+The following circuit and code presents a temperature indicator using the Arduino, digital temperature sensor (DS18B20), and an RGB LED.
 
 First, it's a good practice check our components before making connections.
 
@@ -29,7 +28,7 @@ For convenience we are building the circuit on a breadboard. For a very detailed
 
 Before we enter any code into our Arduino, we'll need a special library for Dallas Semiconductor components - this called "OneWire" 
 
-To install Arduino Libraries simply select "Sketch" >> "Include Library" >> "Manage Libraries" from the pull down menu.
+To install Arduino Libraries simply select **"Sketch" >> "Include Library" >> "Manage Libraries"** from the pull down menu.
 
  
 
