@@ -47,7 +47,6 @@ Let's consider using a rechargeable LiPo battery for our wearable. The advantage
 
 {: .center}
 ![protected lipo](/assets/basics/components_protcells.jpg){:height="75%" width="75%"}
-
 {: .center}
 _Two LiPo batteries containing a protection circuit (always use these)._
 
