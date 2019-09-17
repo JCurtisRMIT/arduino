@@ -6,6 +6,8 @@
 
 * [Analog Temp Sensor (TMP65)](/analogTempSensor.md)
 
+* [Digital Temp Sensor (DS18B20)](/digitalTempSensor.md)
+
 * [NeoPixel Strips](/neoPixelStrip.md)
 
 * [Blynk (8266 WiFi) or USB Arduino](/blynk8266.md)
