@@ -1,12 +1,12 @@
 # Digital Temperature Sensor with RGB LED
 
-The following circuit and code presents a temperature indicator using the Arduino, digital temperature sensor (DS18B20), and an RGB LED.
+The following circuit and code presents a temperature indicator using the Arduino, digital temperature sensor **(DS18B20)**, and an RGB LED.
 
 First, it's a good practice check our components before making connections.
 
-Let's investigate our temperature sensor. Verify that your sensor is indeed the DS18B20. Take the component out of the bag and hold the face up to the light. You should just be able to make out the words "DALLAS 18B20" on the first two lines. We also should have a resistor inside the bag, you may notice that there are several coloured bands on the resistor. These markings are key to determining the value and tolerance.
+Let's investigate our temperature sensor. Verify that your sensor is indeed the **DS18B20**. Take the component out of the bag and hold the face up to the light. You should just be able to make out the words "**DALLAS 18B20**" on the first two lines. We also should have a resistor inside the bag, you may notice that there are several coloured bands on the resistor. These markings are key to determining the value and tolerance.
 
-Let's use a handy resistor colour code calculator (Links to an external site.) to determine the value of our resistor. There are many of these free online or for your smartphone.
+Let's use a handy [resistor colour code calculator](https://www.digikey.com.au/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band) to determine the value of our resistor. There are many of these free online or for your smartphone.
 
 Your resistor should be 4.7k ohms (4700 ohms). If it is not, make sure to get your tutor to swap it for the correct component. Ohms are units of measurement for electrical resistance.
 
@@ -14,7 +14,9 @@ Your resistor should be 4.7k ohms (4700 ohms). If it is not, make sure to get yo
 
 You will also need one common cathode RGB LED and three 330 ohm resistors. You can get an indication if an LED is an RGB LED by its legs - the one we are looking for has four.
 
-Take note, the longest leg is the cathode in with these LEDs. Don't take our word for it, always check for yourself (Links to an external site.).
+Take note, the longest leg is the cathode in with these LEDs. Don't take our word for it, always [check for yourself](https://www.sparkfun.com/products/105). 
+
+
 
 Let's begin by building the following circuit. 
 
@@ -22,11 +24,11 @@ DS18B20Circuit
 
  
 
-For convenience we are building the circuit on a breadboard. For a very detailed account of what a breadboard is and how it works see this tutorial (Links to an external site.).
+For convenience we are building the circuit on a breadboard. For a very detailed account of what a breadboard is and how it works [see this tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard).
 
  
 
-Before we enter any code into our Arduino, we'll need a special library for Dallas Semiconductor components - this called "OneWire" 
+Before we enter any code into our Arduino, we'll need a special library for Dallas Semiconductor components - this called "**OneWire**" 
 
 To install Arduino Libraries simply select **"Sketch" >> "Include Library" >> "Manage Libraries"** from the pull down menu.
 
@@ -38,7 +40,7 @@ Libraries
 
  
 
-Search for and select "OneWire" and install it. Take care to select the library as shown and install it.
+Search for and select "**OneWire**" and install it. Take care to select the library as shown and install it.
 
 This will take only a few seconds complete.
 
