@@ -11,6 +11,7 @@ Ultrasonic
 
 Now open the Arduino IDE and copy across the following code
 
+```c++
 int trigPin = 3; // Trigger Pin
 int echoPin = 2; // Echo Pin
 long duration; // storing variables for duration, cm & inches
@@ -47,7 +48,7 @@ Serial.println();
 
 delay(100);
 }
- 
+``` 
 
 With the sketch above uploaded you should be able to see the distance in CM and inches printed to the Serial Monitor in the Arduino IDE. Not sure which of the transducers are transmitting and which one is receiving? Try blocking each one individually using your finger. You'll notice when you block one, the data grinds to a halt - this is the receiver. Try only blocking the other, you should read a very close distance nice and fast in the Serial Monitor.
 
