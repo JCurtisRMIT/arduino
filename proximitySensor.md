@@ -2,7 +2,7 @@
 
 In this module we will explore capturing motion data using some new Arduino modules. We will also explore capturing this data via the Serial port in our computers so that we can view and analyse the data after the capture.
 
-Let's connect up an HC-SR04 Ultrasonic Sensor.
+Let's connect up an **HC-SR04 Ultrasonic Sensor**.
 
  
 
@@ -55,7 +55,7 @@ With the sketch above uploaded you should be able to see the distance in CM and 
 
 We're performing a simple calculation here using the speed of sound (Links to an external site.) to arrive at our distance in CM and inches. We divide our reading by two before performing this because our reading actually contains the return trip too (ie: double our distance).
 
-Let's now connect up a Piezo buzzer also as shown below.
+Let's now connect up a **Piezo buzzer** also as shown below.
 
 Hint: If you do not have enough female to male jumper leads, use a breadboard to help make the connections.
 
