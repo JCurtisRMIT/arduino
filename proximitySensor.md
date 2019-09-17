@@ -1,11 +1,12 @@
-Exploring Motion with Arduino
+# Arduino Proximity Sensor
+
 In this module we will explore capturing motion data using some new Arduino modules. We will also explore capturing this data via the Serial port in our computers so that we can view and analyse the data after the capture.
 
 Let's connect up an HC-SR04 Ultrasonic Sensor.
 
  
 
-Ultrasonic
+![](/assets/basics/Ultrasonic_bb.png)
 
  
 
@@ -58,7 +59,8 @@ Let's now connect up a Piezo buzzer also as shown below.
 
 Hint: If you do not have enough female to male jumper leads, use a breadboard to help make the connections.
 
-PiezoBuzzer
+
+![](/assets/basics/UltrasonicPiezo_bb.png)
 
  
 
