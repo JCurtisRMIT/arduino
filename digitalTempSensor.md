@@ -20,7 +20,7 @@ Take note, the longest leg is the cathode in with these LEDs. Don't take our wor
 
 Let's begin by building the following circuit. 
 
-DS18B20Circuit
+![](/assets/basics/analogTempSensorAndRGBLEDCircuit.png)
 
  
 
@@ -34,7 +34,7 @@ To install Arduino Libraries simply select **"Sketch" >> "Include Library" >> "M
 
  
 
-Libraries
+![](/assets/basics/libraries.png)
 
  
 
@@ -46,7 +46,7 @@ This will take only a few seconds complete.
 
  
 
-OneWire
+![](/assets/basics/onewire.png)
 
 Now, enter the following code into the Arduino IDE and upload it to the Arduino.
  
