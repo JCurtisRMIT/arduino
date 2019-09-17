@@ -43,7 +43,7 @@ For example, this rechargeable Lithium-Ion Polymer (LiPo) battery uses 3.7v and 
  
 
 ### Supplying the Arduino
-Let's consider using a rechargeable LiPo battery for our wearable. The advantage of Lithium-Ion Polymer batteries is that they are relatively small, sit flat in a rectangular form factor (mostly) and are rechargeable. One important thing to note is that they are also somewhat delicate, so handle them with care so as not to puncture, scratch or rupture the casing. Also, never, ever get them wet or anywhere near flame. (Links to an external site.)
+Let's consider using a rechargeable LiPo battery for our wearable. The advantage of Lithium-Ion Polymer batteries is that they are relatively small, sit flat in a rectangular form factor (mostly) and are rechargeable. One important thing to note is that they are also somewhat delicate, so handle them with care so as not to puncture, scratch or rupture the casing. Also, [never, ever get them wet or anywhere near flame.](https://www.youtube.com/watch?v=cTJh_bzI0QQ)
 
 {: .center}
 ![protected lipo](/assets/basics/components_protcells.jpg){:height="75%" width="75%"}
