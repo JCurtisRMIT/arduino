@@ -48,10 +48,10 @@ This will take only a few seconds complete.
 
 OneWire
 
+Now, enter the following code into the Arduino IDE and upload it to the Arduino.
+ 
  
 ``` c++
-Now, enter the following code into the Arduino IDE and upload it to the Arduino.
-
 #include <OneWire.h>
 
 // OneWire DS18S20, DS18B20, DS1822 Temperature Example (modified for RGB LED)
