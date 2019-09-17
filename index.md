@@ -16,6 +16,8 @@
 
 * [Blynk (8266 WiFi) or USB Arduino](/blynk8266.md)
 
+* [Powering Your Prototype](/poweringYourPrototype.md)
+
 * [Making a Voltage Divider](/voltageDivider.md)
 
 * [Conductive Paint Tattoo Synthesizer](/APC.md)
