@@ -73,7 +73,7 @@ Charging (and discharging) a LiPo Safely
 There are many options available to charge a LiPo, however not all of them are safe! You will need to take care when charging a LiPo battery. Or else it may explode and catch fire. Please only use the charging solutions offered above to charge your LiPo.
 
 
-
+{: .center}
  [![How Dangerous are LiPo Batteries?](https://img.youtube.com/vi/osfgkFyq7lA/0.jpg)](https://www.youtube.com/watch?v=osfgkFyq7lA)
 
  
