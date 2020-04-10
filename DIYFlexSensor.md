@@ -70,6 +70,8 @@ Now we can set up our Arduino and circuit. You can use a single 10M Ohm resistor
 {: .center}
 ![](/assets/basics/flexsensor011.png){: width="50%" height="50%"}
 
+Here's the Arduino script. We've made a function to collect readings and return the mean average. This helps to smooth out noisy readings. I find 200 readings works well enough, but you can experiment here.
+
 ``` c++
 int sensorPin = A0; // creating a variable to store the location of the connected sensor pin
 
@@ -98,3 +100,16 @@ void loop()
 }
 ```
 
+Use the Serial Plotter (Tools > Serial Plotter) to view the results while flexing your new sensor!
+
+{: .center}
+![](/assets/basics/flexsensor012.png){: width="50%" height="50%"}
+
+If you are getting negative readings you have an issue with your sensor. Most likely the two pieces of foil are touching each other or you are creating short with your fingers. Try to avoid touching the base of your sensor where the wires connect.
+
+{: .center}
+![](/assets/basics/flexsensor013.png){: width="50%" height="50%"}
+
+Now use this basic method to explore creating new flex sensors with other materials. Perhaps explore reinforcing your sensor with fabric? Maybe you could remove the foil altogether and use long (stripped) wires instead. How does the sensor perform at different lengths and widths? Remember you can experiment with the resistor values in the circuit to adjust the sensitivity.
+
+Happy prototyping!
