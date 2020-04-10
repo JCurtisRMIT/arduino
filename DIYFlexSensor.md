@@ -48,27 +48,24 @@ Mount the paper/cardboard onto the centre of one of the pieces of tape. Make sur
 Press both pieces of tape together sandwiching the graphite paper between the foil. Make sure the foil pieces from each end do not touch. If you want to use alligator clips you can leave a little piece of foil poking out each end on opposite sides.
 
 {: .center}
-![](/assets/basics/flexsensor005.jpeg){: width="50%" height="50%"}
+![](/assets/basics/flexsensor005.jpeg){: width="25%" height="25%"}
 
 {: .center}
-![](/assets/basics/flexsensor006.jpeg){: width="50%" height="50%"}
+![](/assets/basics/flexsensor006.jpeg){: width="25%" height="25%"}
 
 
 If you want to attach wires, I find it easier to angle them 90 degrees and tape them on while testing.
 
 {: .center}
-![](/assets/basics/flexsensor008.jpeg){: width="50%" height="50%"}
-
-{: .center}
-![](/assets/basics/flexsensor009.jpeg){: width="50%" height="50%"}
+![](/assets/basics/flexsensor008.jpeg){: width="25%" height="25%"} ![](/assets/basics/flexsensor009.jpeg){: width="50%" height="50%"}
 
 Now we can set up our Arduino and circuit. You can use a single 10M Ohm resistor or several 1M Ohm resistors in series. It doesn't matter which way round you connect the flex sensor wires.
 
 {: .center}
-![](/assets/basics/flexsensor010.png){: width="50%" height="50%"}
+![](/assets/basics/flexsensor010.png){: width="25%" height="25%"}
 
 {: .center}
-![](/assets/basics/flexsensor011.png){: width="50%" height="50%"}
+![](/assets/basics/flexsensor011.png){: width="25%" height="25%"}
 
 Here's the Arduino script. We've made a function to collect readings and return the mean average. This helps to smooth out noisy readings. I find 200 readings works well enough, but you can experiment here.
 
