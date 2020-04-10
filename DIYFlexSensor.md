@@ -48,7 +48,7 @@ Mount the paper/cardboard onto the centre of one of the pieces of tape. Make sur
 Press both pieces of tape together sandwiching the graphite paper between the foil. Make sure the foil pieces from each end do not touch. If you want to use alligator clips you can leave a little piece of foil poking out each end on opposite sides.
 
 {: .center}
-![](/assets/basics/flexsensor005.jpeg){: width="25%" height="25%"} ![](/assets/basics/flexsensor006.jpeg){: width="25%" height="25%"}
+![](/assets/basics/flexsensor005.jpeg){: width="45%" height="45%"} ![](/assets/basics/flexsensor006.jpeg){: width="45%" height="45%"}
 
 
 If you want to attach wires, I find it easier to angle them 90 degrees and tape them on while testing.
