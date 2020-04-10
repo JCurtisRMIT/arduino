@@ -94,7 +94,7 @@ void loop()
 Use the Serial Plotter (Tools > Serial Plotter) to view the results while flexing your new sensor!
 
 {: .center}
-![](/assets/basics/flexsensor012.png){: width="50%" height="50%"}
+![](/assets/basics/flexsensor012.png){: width="75%" height="75%"}
 
 If you are getting negative readings you have an issue with your sensor. Most likely the two pieces of foil are touching each other or you are creating short with your fingers. Try to avoid touching the base of your sensor where the wires connect.
 
