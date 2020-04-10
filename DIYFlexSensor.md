@@ -22,10 +22,30 @@ Graphite (like in pencils) is conductive and can be used to create low cost and 
 
 Start by slicing a piece of paper (or cardboard if you would prefer a firmer flex sensor) and draw as much graphite as you can to both sides. Make sure both sides are covered in graphite edge to edge. The width of your paper should be slightly slimmer than the width of your tape. 
 
+
 {: .center}
 ![](/assets/basics/flexsensor001.jpg){: width="50%" height="50%"}
+
 
 Now slice up two pieces kitchen foil, each of these should be the same size - and slimmer than your paper/cardboard piece.
 
 {: .center}
 ![](/assets/basics/flexsensor002.jpeg){: width="50%" height="50%"}
+
+
+Now carefully place the foil centred onto your tape, shiny side up. 
+
+{: .center}
+![](/assets/basics/flexsensor003.jpeg){: width="50%" height="50%"}
+
+
+Mount the paper/cardboard onto the centre of one of the pieces of tape. Make sure no foil is poking out of the sides. You need to avoid the two pieces of foil touching each other and shorting or the sensor will not work. 
+
+{: .center}
+![](/assets/basics/flexsensor004.jpeg){: width="50%" height="50%"}
+
+
+Press both pieces of tape together sandwiching the graphite paper between the foil. Make sure the foil pieces from each end do not touch.
+
+{: .center}
+![](/assets/basics/flexsensor005.jpeg){: width="50%" height="50%"}
