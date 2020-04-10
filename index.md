@@ -26,6 +26,6 @@
 
 * [Conductive Paint Tattoo Synthesizer](/APC.md)
 
-* [DIY LowTech Flex Sensor](/DIYFlexsensor.md)
+* [DIY LowTech Flex Sensor](/DIYFlexSensor.md)
 
 
