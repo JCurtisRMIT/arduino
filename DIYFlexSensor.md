@@ -54,7 +54,7 @@ Press both pieces of tape together sandwiching the graphite paper between the fo
 If you want to attach wires, I find it easier to angle them 90 degrees and tape them on while testing.
 
 {: .center}
-![](/assets/basics/flexsensor008.jpeg){: width="25%" height="25%"} ![](/assets/basics/flexsensor009.jpeg){: width="25%" height="25%"}
+![](/assets/basics/flexsensor008.jpeg){: width="45%" height="45%"} ![](/assets/basics/flexsensor009.jpeg){: width="45%" height="45%"}
 
 Now we can set up our Arduino and circuit. You can use a single 10M Ohm resistor or several 1M Ohm resistors in series. It doesn't matter which way round you connect the flex sensor wires.
 
